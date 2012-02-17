@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Nuhacks</title>
+  <title>NU Hacks</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="brand" href="/">NU Hacks</a>
+        <%= tabs %>
+      </div>
+    </div>
+  </div>
 
+  <div class="container">
+
+    <%= yield %>
+
+
+    <footer>
+      <p>A NU Student group</p>
+    </footer>
+  </div>
 </body>
 </html>
