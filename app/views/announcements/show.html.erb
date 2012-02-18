@@ -1,15 +1,10 @@
-<p id="notice"><%= notice %></p>
+<div id="notice" class="alert"><%= notice %></div>
 
-<p>
-  <b>Subject:</b>
-  <%= @announcement.subject %>
-</p>
+<h1><%= @announcement.subject %></h1>
 
-<p>
-  <b>Body:</b>
-  <%= @announcement.body %>
-</p>
-
+<div class="content">
+  <%= markdown_to_html @announcement.body %>
+</div>
 
 <%= link_to 'Edit', edit_announcement_path(@announcement) %> |
 <%= link_to 'Back', announcements_path %>
