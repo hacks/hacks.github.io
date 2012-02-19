@@ -1,6 +1,7 @@
 <%= simple_form_for @announcement do |f| %>
   <%= f.input :subject %>
-  <%= f.input :body, :hint => 'You can use Markdown' %>
+  <%= f.input :body,
+    :hint => 'You can use <a href="http://daringfireball.net/projects/markdown/">Markdown</a>.'.html_safe %>
   <%= f.button :submit %>
 <% end %>
 
