@@ -121,7 +121,7 @@ Tabulous.setup do |config|
   # This gives you control over what class the <ul> element that wraps the tabs
   # will have.  Good for interfacing with third-party code like Twitter
   # Bootstrap.
-  config.tabs_ul_class = "nav nav-pills"
+  config.tabs_ul_class = "nav"
 
   # Set this to true to have subtabs rendered in markup that Twitter Bootstrap
   # understands.  If this is set to true, you don't need to call subtabs in
