@@ -9,7 +9,7 @@ group :development do
   gem 'sqlite3'
 end
 
-gem 'simple_form'           # Nice form builder
+gem 'simple_form', git: 'git://github.com/plataformatec/simple_form.git'  # Nice form builder
 gem 'tabulous', '~> 1.2.0'  # Navigation tabs
 gem 'redcarpet'             # Markdown parsing
 
