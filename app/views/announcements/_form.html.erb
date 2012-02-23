@@ -1,7 +1,25 @@
-<%= simple_form_for @announcement do |f| %>
-  <%= f.input :subject %>
-  <%= f.input :body,
+<%= simple_form_for @announcement, :html => { :class => 'form-horizontal' } do |f| %>
+
+  <% if f.error_notification %>
+  <div class="alert alert-error fade in">
+    <a class="close" data-dismiss="alert" href="#">&times;</a>
+    <%= f.error_notification %>
+  </div>
+  <% end %>
+
+  <legend>Announcement</legend>
+
+  <%= f.input :subject, :input_html => { :class => 'span6' },
+                        :hint => "This is also used as a 'slug' for displaying annoucements on the front page." %>
+  <%= f.input :body, :input_html => { :class => 'span6' },
     :hint => 'You can use <a href="http://daringfireball.net/projects/markdown/">Markdown</a>.'.html_safe %>
-  <%= f.button :submit %>
+
+  <div class="form-actions">
+    <%= f.button :submit, :class => 'btn-primary' %>
+    <%= submit_tag 'Cancel', :type => :reset,
+                             :confirm => 'Are you sure?',
+                             :class => 'btn btn-danger' %>
+  </div>
+
 <% end %>
 
