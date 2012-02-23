@@ -1,12 +1,10 @@
-<p id="notice"><%= notice %></p>
+<% if notice %>
+<div id="notice" class="alert alert-info"><%= notice %></div>
+<% end %>
+
+<h1><%= @event.name %></h1>
 
 <p>
-  <b>Name:</b>
-  <%= @event.name %>
-</p>
-
-<p>
-  <b>Details:</b>
   <%= @event.details %>
 </p>
 
