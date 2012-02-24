@@ -13,6 +13,8 @@ gem 'simple_form', git: 'git://github.com/plataformatec/simple_form.git'  # Nice
 gem 'tabulous', '~> 1.2.0'  # Navigation tabs
 gem 'redcarpet'             # Markdown parsing
 gem 'stamp'
+gem 'oauth'
+gem 'twitter'
 
 # Gems used only for assets and not required
 # in production environments by default.
