@@ -2,8 +2,12 @@
   <h1>NU Hacks</h1>
   <p>We spit code like hot fire</p>
 
-  <a href="https://twitter.com/nuhacks" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @nuhacks</a>
-  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  <br>
+
+  <div id="twitter-button" class="offset4">
+    <a href="https://twitter.com/nuhacks" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @nuhacks</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  </div>
 
 </div>
 
@@ -33,16 +37,24 @@
 
   <div class="span4">
     <h3>Our Next Event</h3>
-    <h4>When?</h4>
+    <% if @next_event %>
+    <h4><%= @next_event.name %></h4>
+    <b>When?</b>
     <p>
       <i class="icon-time"></i>
-      Thursday, March 1 from 7pm to 11pm.
+      <%= @next_event.when %>
     </p>
-    <h4>Where?</h4> 
+    <b>Where?</b> 
     <p>
       <i class="icon-flag"></i>
-      International Village 019
-    </p>
+      <%= @next_event.location %>
+      </p>
+    <% else %>
+      <p>Nothing's planned right now. <br>
+      Check back later!</p>
+      <p>Have an idea for a cool event?
+      <a href="http://twitter.com/nuhacks">Tweet us!</a></p>
+    <% end %>
   </div>
 
 </div>
