@@ -38,16 +38,18 @@
   <div class="span4">
     <h3>Our Next Event</h3>
     <% if @next_event %>
-    <h4><%= @next_event.name %></h4>
-    <b>When?</b>
-    <p>
-      <i class="icon-time"></i>
-      <%= @next_event.when %>
-    </p>
-    <b>Where?</b> 
-    <p>
-      <i class="icon-flag"></i>
-      <%= @next_event.location %>
+      <h4><%= @next_event.name %></h4>
+
+      <b>When?</b>
+      <p>
+        <i class="icon-time"></i>
+        <%= @next_event.when %>
+      </p>
+
+      <b>Where?</b>
+      <p>
+        <i class="icon-flag"></i>
+        <%= @next_event.location %>
       </p>
     <% else %>
       <p>Nothing's planned right now. <br>
