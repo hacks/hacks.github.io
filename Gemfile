@@ -13,18 +13,12 @@ gem 'simple_form', git: 'git://github.com/plataformatec/simple_form.git'  # Nice
 gem 'tabulous', '~> 1.2.0'  # Navigation tabs
 gem 'redcarpet'             # Markdown parsing
 gem 'stamp'
-gem 'oauth'
-gem 'twitter'
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-
-  # Twitterize me, captain
-  gem 'bootstrap-sass', '~> 2.0.1'
-  gem 'bootstrap_forms'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer'
@@ -33,6 +27,10 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
+# Twitterize me, captain
+gem 'bootstrap-sass', '~> 2.0.1'
+gem 'bootstrap_forms'
 
 group :production do
   # gems specifically for Heroku go here
