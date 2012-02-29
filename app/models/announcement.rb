@@ -1,6 +1,3 @@
 class Announcement < ActiveRecord::Base
-
-    validates :subject, :presence => true
-    validates :body, :presence => true
-
+  validates_presence_of :subject, :body
 end
