@@ -3,6 +3,9 @@ class Event < ActiveRecord::Base
   validates :start_time, :presence => true
   validates :end_time, :presence => true
 
+  scope :upcoming, where("end_time >= ?", Date.today).order("start_time asc")
+  scope :happened, where("end_time < ?", Date.today).order("end_time desc")
+
   # Helps make quick datestamps
   # "Feb 23rd at 4:30pm"
   def self.stamp_date(datetime, date_format="Feb 9th", time_format="7 pm")
