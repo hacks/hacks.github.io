@@ -1,41 +1,45 @@
-<div class="hero-unit">
-  <h1>NU Hacks</h1>
-  <p>We spit code like hot fire</p>
+<header class="row-fluid">
+  <hgroup>
+    <h1>NU Hacks</h1>
+    <h2>We spit code like hot fire</h2>
+  </hgroup>
 
   <br>
 
-  <div id="twitter-button" class="offset4">
+  <div id="twitter-button">
     <a href="https://twitter.com/nuhacks" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @nuhacks</a>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
   </div>
 
-</div>
+</header>
 
 
+<hr>
 <!-- the 411 -->
 
-<div class="row">
+<div class="row-fluid">
 
-  <div class="span4">
-    <h3>Who are you guys?</h3>
-    <p>We're a bunch of tech-minded
-    students who meet up to share and work on cool
-    projects. Come hangout and hack the night away
-    with others interested in tech and entrepreneurship.
-    Meet other technical students over some snacks
-    and share your own projects to get feedback and
-    support from other hackers.</p>
+  <div class="span6">
+    <div class="row-fluid">
+      <h3>Who are you guys?</h3>
+      <p>We're a bunch of tech-minded
+      students who meet up to share and work on cool
+      projects. Come hangout and hack the night away
+      with others interested in tech and entrepreneurship.
+      Meet other technical students over some snacks
+      and share your own projects to get feedback and
+      support from other hackers.</p>
+    </div>
+
+
+    <div class="row-fluid">
+      <h3>What should I bring?</h3>
+      <p>Bring a laptop and something cool to work on.
+      If you don't have a project, be willing to help others.</p>
+    </div>
   </div>
 
-
-  <div class="span4">
-    <h3>What should I bring?</h3>
-    <p>Bring a laptop and something cool to work on.
-    If you don't have a project, be willing to help others.</p>
-  </div>
-
-
-  <div class="span4">
+  <div class="span6">
     <h3>Our Next Event</h3>
     <% if @next %>
       <h4><%= @next.name %></h4>
