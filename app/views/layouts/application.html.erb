@@ -8,24 +8,15 @@
 </head>
 <body>
 
-  <div class="navbar">
-    <div class="navbar-inner">
-      <div class="container">
-        <a class="brand" href="/">NU Hacks</a>
-        <%= tabs %>
-      </div>
-    </div>
-  </div>
+<div class="container">
 
-  <div class="container">
+  <%= yield %>
 
-    <%= yield %>
+  <hr>
 
-    <hr>
-
-    <footer>
-      <p>A NU Student group. <a href="http://github.com/ali/nuhacks">Fork us on Github!</a></p>
-    </footer>
-  </div>
+  <footer>
+    <p>A NU Student group. <a href="http://github.com/ali/nuhacks">Fork us on Github!</a></p>
+  </footer>
+</div>
 </body>
 </html>
