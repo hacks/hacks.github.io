@@ -58,7 +58,7 @@ Tabulous.setup do |config|
       #    TAB NAME              |    DISPLAY TEXT       |    PATH                  |    VISIBLE?    |    ENABLED?    #
       #---------------------------------------------------------------------------------------------------------------#
       [    :home_tab             ,    'Home'             ,    root_path             ,    true        ,    true        ],
-      [    :announcements_tab    ,    'Announcements'    ,    announcements_path    ,    true        ,    true        ],
+#      [    :announcements_tab    ,    'Announcements'    ,    announcements_path    ,    true        ,    true        ],
       [    :events_tab           ,    'Events'           ,    events_path           ,    true        ,    true        ],
       #---------------------------------------------------------------------------------------------------------------#
       #    TAB NAME              |    DISPLAY TEXT       |    PATH                  |    VISIBLE?    |    ENABLED?    #
@@ -86,7 +86,7 @@ Tabulous.setup do |config|
       #    CONTROLLER        |    ACTION          |    TAB                   #
       #----------------------------------------------------------------------#
       [    :pages            ,    :all_actions    ,    :home_tab             ],
-      [    :announcements    ,    :all_actions    ,    :announcements_tab    ],
+#     [    :announcements    ,    :all_actions    ,    :announcements_tab    ],
       [    :events           ,    :all_actions    ,    :events_tab           ],
       #----------------------------------------------------------------------#
       #    CONTROLLER        |    ACTION          |    TAB                   #
