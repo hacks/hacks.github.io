@@ -3,7 +3,7 @@ Nuhacks::Application.routes.draw do
 
   root :to => "pages#index" 
 
-  resources :announcements
+  # resources :announcements
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
