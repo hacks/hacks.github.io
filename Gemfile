@@ -10,7 +10,7 @@ group :development do
 end
 
 gem 'simple_form', git: 'git://github.com/plataformatec/simple_form.git'  # Nice form builder
-gem 'tabulous', '~> 1.2.0'  # Navigation tabs
+# gem 'tabulous', '~> 1.2.0'  # Navigation tabs
 gem 'redcarpet'             # Markdown parsing
 gem 'stamp'
 
