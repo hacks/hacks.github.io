@@ -1,4 +1,4 @@
-<header class="row-fluid">
+<header class="row">
   <hgroup>
     <h1>NU Hacks</h1>
     <h2>We spit code like hot fire</h2>
@@ -17,50 +17,49 @@
 <hr>
 <!-- the 411 -->
 
-<div class="row-fluid">
+<div id="main-info" class="row">
 
-  <div class="span6">
-    <div class="row-fluid">
-      <h3>Who are you guys?</h3>
-      <p>We're a bunch of tech-minded
-      students who meet up to share and work on cool
-      projects. Come hangout and hack the night away
-      with others interested in tech and entrepreneurship.
-      Meet other technical students over some snacks
-      and share your own projects to get feedback and
-      support from other hackers.</p>
+    <div id="about-us" class="span5">
+      <div>
+        <h2>Who are you guys?</h2>
+        <p>We're a bunch of tech-minded
+        students who meet up to share and work on cool
+        projects. Come hangout and hack the night away
+        with others interested in tech and entrepreneurship.
+        Meet other technical students over some snacks
+        and share your own projects to get feedback and
+        support from other hackers.</p>
+      </div>
+
+      <div>
+        <h2>What should I bring?</h2>
+        <p>Bring a laptop and something cool to work on.
+        If you don't have a project, be willing to help others.</p>
+      </div>
     </div>
 
+    <div id="next-event" class="span5">
+      <h2>Our Next Event</h2>
+      <% if @next %>
+        <h1><%= @next.name %></h1>
 
-    <div class="row-fluid">
-      <h3>What should I bring?</h3>
-      <p>Bring a laptop and something cool to work on.
-      If you don't have a project, be willing to help others.</p>
+        <b>When?</b>
+        <p>
+          <i class="icon-time"></i>
+          <%= @next.when %>
+        </p>
+
+        <b>Where?</b>
+        <p>
+          <i class="icon-flag"></i>
+          <%= @next.location %>
+        </p>
+      <% else %>
+        <p>Nothing's planned right now. <br>
+        Check back later!</p>
+        <p>Have an idea for a cool event?
+        <a href="http://twitter.com/nuhacks">Tweet us!</a></p>
+      <% end %>
     </div>
-  </div>
-
-  <div class="span6">
-    <h3>Our Next Event</h3>
-    <% if @next %>
-      <h4><%= @next.name %></h4>
-
-      <b>When?</b>
-      <p>
-        <i class="icon-time"></i>
-        <%= @next.when %>
-      </p>
-
-      <b>Where?</b>
-      <p>
-        <i class="icon-flag"></i>
-        <%= @next.location %>
-      </p>
-    <% else %>
-      <p>Nothing's planned right now. <br>
-      Check back later!</p>
-      <p>Have an idea for a cool event?
-      <a href="http://twitter.com/nuhacks">Tweet us!</a></p>
-    <% end %>
-  </div>
 
 </div>
