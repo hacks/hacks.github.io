@@ -7,7 +7,7 @@ h1, h2, h3, h4, h5, h6, p, b, strong, em, i { color: #fff; }
 header {
   text-align: center;
   margin-bottom: 2em;
-
+  text-shadow: 0 0.1em 1em #000;
 
   h1, h2 {
     margin: 0.5em 0 0.5em;
@@ -19,6 +19,16 @@ header {
 
   h2 {
     font-size: 2em;
+  }
+}
+
+footer {
+  text-align: center;
+  margin-top: 6em;
+
+  p {
+    font-size: 1.5em;
+    text-shadow: 0 1em 4em #000;
   }
 }
 
