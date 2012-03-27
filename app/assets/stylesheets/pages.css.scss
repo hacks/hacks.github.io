@@ -40,3 +40,15 @@ footer {
 #about-us div:first-child {
   margin-bottom: 2em;
 }
+
+body {
+  background: none;
+}
+
+html {
+  background: url(asset-path("parkstreet.jpeg", image)) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
