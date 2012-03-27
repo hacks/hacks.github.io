@@ -1,6 +1,10 @@
 Nuhacks::Application.routes.draw do
   resources :events
 
+  namespace :admin do
+    resources :events
+  end
+
   root :to => "pages#index" 
 
   # resources :announcements
