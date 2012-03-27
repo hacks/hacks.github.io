@@ -1,0 +1,23 @@
+<% if notice %>
+<div id="notice" class="alert alert-info"><%= notice %></div>
+<% end %>
+
+<h1><%= @event.name %></h1>
+<br>
+<p>
+  <%= @event.details %>
+</p>
+
+<p>
+  <b>Where:</b>
+  <%= @event.location %>
+</p>
+
+<p>
+  <b>When:</b>
+  <%= @event.when %>
+</p>
+
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>
