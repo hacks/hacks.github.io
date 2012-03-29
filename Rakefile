@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Nuhacks::Application.load_tasks
+NUHacks::Application.load_tasks
