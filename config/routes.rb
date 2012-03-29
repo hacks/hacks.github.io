@@ -1,4 +1,4 @@
-Nuhacks::Application.routes.draw do
+NUHacks::Application.routes.draw do
   resources :events
 
   namespace :admin do
