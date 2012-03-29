@@ -1,4 +1,4 @@
-<%= simple_form_for @event, :html => { :class => "form-horizontal" }  do |f| %>
+<%= simple_form_for [:admin, @event], :html => { :class => "form-horizontal" }  do |f| %>
 
   <% if f.error_notification %>
   <div class="alert alert-error fade in">

@@ -19,13 +19,13 @@
     <td><%= event.location %></td>
     <td><%= event.when_it_starts %></td>
     <td><%= event.when_it_ends %></td>
-    <td><%= link_to 'Show', event %></td>
-    <td><%= link_to 'Edit', edit_event_path(event) %></td>
-    <td><%= link_to 'Destroy', event, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Show', [:admin, event] %></td>
+    <td><%= link_to 'Edit', edit_admin_event_path(event) %></td>
+    <td><%= link_to 'Destroy', [:admin, event], confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Event', new_event_path %>
+<%= link_to 'New Event', new_admin_event_path %>
