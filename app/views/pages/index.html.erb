@@ -35,29 +35,40 @@
         If you don't have a project, be willing to help others.</p>
       </div>
     </div>
+    <div class="span5">
+      <div id="next-event">
+        <h2>Our Next Event</h2>
+        <% if @next %>
+          <h1><%= @next.name %></h1>
 
-    <div id="next-event" class="span5">
-      <h2>Our Next Event</h2>
-      <% if @next %>
-        <h1><%= @next.name %></h1>
+          <b>When?</b>
+          <p>
+            <i class="icon-time"></i>
+            <%= @next.when %>
+          </p>
 
-        <b>When?</b>
-        <p>
-          <i class="icon-time"></i>
-          <%= @next.when %>
-        </p>
+          <b>Where?</b>
+          <p>
+            <i class="icon-flag"></i>
+            <%= @next.location %>
+          </p>
+        <% else %>
+          <p>Nothing's planned right now. <br>
+          Check back later!</p>
+          <p>Have an idea for a cool event?
+          <a href="http://twitter.com/nuhacks">Tweet us!</a></p>
+        <% end %>
+      </div>
 
-        <b>Where?</b>
-        <p>
-          <i class="icon-flag"></i>
-          <%= @next.location %>
-        </p>
-      <% else %>
-        <p>Nothing's planned right now. <br>
-        Check back later!</p>
-        <p>Have an idea for a cool event?
-        <a href="http://twitter.com/nuhacks">Tweet us!</a></p>
-      <% end %>
+      <div id="mailing-list">
+        <h2>Stay updated</h2>
+
+        <form action="http://nuhacks.us4.list-manage2.com/subscribe/post?u=cbcce83bcf3543d25bd103865&amp;id=6c0da9d34e" method="post" name="mc-embedded-subscribe-form" class="form-inline" target="_blank">
+          <label for="mc-EMAIL"><p>Subscribe to our mailing list</p></label>
+          <input type="email" value="" name="EMAIL" id="mc-EMAIL" placeholder="email address" required>
+          <input type="submit" value="Subscribe" name="subscribe" id="mc-submit" class="btn">
+        </form>
+      </div>
     </div>
 
 </div>
