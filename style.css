@@ -1,0 +1,57 @@
+/* hax hax hax hax hax errybody! */
+
+body {
+  background: #000;
+  text-align: center;
+  padding: 2em 0;
+  font-size: 1.6em;
+  font-family: monospace;
+  color: #fff;
+}
+
+#main {
+  width: 600px;
+  margin: 0 auto;
+}
+
+pre, p, ul, form {
+  margin: 2em 0;
+}
+
+pre {
+  font-size: 0.619em;
+  color: #F2543D;
+}
+
+a {
+  color: #84c2ff;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+footer { color: transparent; }
+
+/** Newsletter signup form */
+input {
+  font-family: monospace;
+  border: none;
+  background: none;
+  font-size: 1em;
+}
+
+input[type="email"] {
+  border-bottom: 2px #fff dashed;
+  outline: none;
+}
+
+input[type="submit"] {
+  color: #000;
+  background: #84c2ff;
+}
+
+input[type="submit"]:hover {
+  cursor: pointer;
+}
