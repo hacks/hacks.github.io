@@ -45,6 +45,7 @@ input {
 input[type="email"] {
   border-bottom: 2px #fff dashed;
   outline: none;
+  color: #fff;
 }
 
 input[type="submit"] {
