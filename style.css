@@ -12,15 +12,27 @@ body {
 #main {
   width: 600px;
   margin: 0 auto;
+  line-height: 1.25em;
 }
 
 pre, p, ul, form {
   margin: 2em 0;
 }
 
-pre {
+header .logo {
   font-size: 0.619em;
   color: #F2543D;
+  line-height: 1em;
+}
+
+header.small .logo {
+  margin: .5em 0;
+  font-size: 0.4em;
+}
+
+header.small p {
+  font-size: .75em;
+  margin: 0;
 }
 
 a {
