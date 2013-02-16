@@ -1,0 +1,20 @@
+development:
+  adapter: postgresql
+  database: nuhacks_dev
+  username: postgres
+  password: postgres
+  host: localhost
+
+test:
+  adapter: postgresql
+  database: nuhacks_test
+  username: postgres
+  password: postgres
+  host: localhost
+
+production:
+  adapter: postgresql
+  database: nuhacks_live
+  username: postgres
+  password: postgres
+  host: localhost

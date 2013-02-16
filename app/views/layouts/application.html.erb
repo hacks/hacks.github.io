@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nuhacks</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <header>
+    <%= logo %>
+
+    <ul>
+      <li>links</li>
+    </ul>
+
+    <ul class="user-links">
+    <% if user_signed_in? %>
+      <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
+    <% else %>
+      <li><%= link_to('Login', new_user_session_path)  %></li>
+    <% end %>
+    </ul>
+  </header>
+
+  <% if flash.notice %>
+    <div class="flash notice">
+      <p class="notice"><%= notice %></p>
+    </div>
+  <% end %>
+  <% if flash.alert %>
+    <div class="flash alert">
+      <p class="alert"><%= alert %></p>
+    </div>
+  <% end %>
+
+  <%= yield %>
+
+</body>
+</html>
