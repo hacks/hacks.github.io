@@ -1,5 +1,9 @@
 Nuhacks::Application.routes.draw do
   devise_for :users
 
-  root :to => 'application#index'
+  resources :users, :only => [:index, :show] do
+    resources :events
+  end
+
+  root :to => 'site#index'
 end

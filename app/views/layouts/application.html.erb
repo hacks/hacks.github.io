@@ -12,14 +12,16 @@
     <%= logo %>
 
     <ul>
-      <li>links</li>
+      <li><a href="#">projects</a></li>
+      <li><%= link_to "users", users_path %></li>
     </ul>
 
     <ul class="user-links">
     <% if user_signed_in? %>
-      <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
+      <li><%= link_to current_user.name, edit_user_registration_path(current_user) %></li>
+      <li><%= link_to('logout', destroy_user_session_path, :method => :delete) %></li>
     <% else %>
-      <li><%= link_to('Login', new_user_session_path)  %></li>
+      <li><%= link_to('login', new_user_session_path)  %></li>
     <% end %>
     </ul>
   </header>
@@ -35,7 +37,9 @@
     </div>
   <% end %>
 
-  <%= yield %>
+  <div class="content">
+    <%= yield %>
+  </div>
 
 </body>
 </html>
