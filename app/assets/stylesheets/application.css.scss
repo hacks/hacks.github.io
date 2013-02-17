@@ -71,3 +71,14 @@ header .user-links {
 .content {
   margin: 0 100px;
 }
+
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+
+  p {
+    font-size: 12px;
+  }
+}
