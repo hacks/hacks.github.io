@@ -8,6 +8,7 @@ module UsersHelper
     link_to text, "mailto:#{user.email}"
   end
   def twitter_link(user, options={})
+    return nil if user.twitter.blank?
     if options[:icon]
       text = raw("<i class=\"icon-twitter\"></i>")
     else
@@ -16,6 +17,7 @@ module UsersHelper
     link_to text, "http://www.twitter.com/#{user.twitter}"
   end
   def github_link(user, options={})
+    return nil if user.github.blank?
     if options[:icon]
       text = raw("<i class=\"icon-github-alt\"></i>")
     else

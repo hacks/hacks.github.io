@@ -1,3 +1,47 @@
+.user-form {
+  margin: 0 auto;
+  padding: 10px;
+  width: 200px;
+
+  label[required]:after{
+    content:"*"
+  }
+
+  input {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  hr {
+    margin: 10px 1px;
+    width: 100%;
+  }
+
+  input[type="submit"] {
+    color: #111;
+    width: 103%;
+    margin: 10px 0;
+    font-size: 14px;
+    height: 30px;
+    border: none;
+    background-color: #f2543d;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  input[type="checkbox"] {
+    width: auto;
+  }
+}
+
 .users li {
   list-style: none;
+  margin-bottom: 3px;
+
+  .external-links {
+    display: inline-block;
+    width: 100px;
+  }
 }

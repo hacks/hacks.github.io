@@ -1,21 +1,29 @@
-<h2>Sign up</h2>
+<div class="user-form">
+  <h2>Sign up</h2>
 
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+  <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+    <%= devise_error_messages! %>
 
-  <div><%= f.label :name %><br />
-  <%= f.text_field :name, :autofocus => true %></div>
+    <div><%= f.label :name, :required => true %><br />
+    <%= f.text_field :name, :autofocus => true %></div>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
+    <div><%= f.label :email, :required => true %><br />
+    <%= f.email_field :email %></div>
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
+    <div><%= f.label :password, :required => true %><br />
+    <%= f.password_field :password %></div>
 
-  <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
+    <div><%= f.label :password_confirmation, :required => true %><br />
+    <%= f.password_field :password_confirmation %></div>
 
-  <div><%= f.submit "Sign up" %></div>
-<% end %>
+    <div><%= f.label :twitter %><br />
+    <%= f.text_field :twitter %></div>
 
-<%= render "devise/shared/links" %>
+    <div><%= f.label :github %><br />
+    <%= f.text_field :github %></div>
+
+    <div><%= f.submit "Sign up" %></div>
+  <% end %>
+
+  <%= render "devise/shared/links" %>
+</div>
