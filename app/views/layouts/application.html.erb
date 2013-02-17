@@ -8,37 +8,39 @@
 </head>
 <body>
 
-  <header>
-    <%= logo %>
+  <div class="container">
+    <header>
+      <%= logo %>
 
-    <ul>
-      <li><a href="#">projects</a></li>
-      <li><%= link_to "users", users_path %></li>
-    </ul>
+      <ul>
+        <li><a href="#">projects</a></li>
+        <li><%= link_to "users", users_path %></li>
+      </ul>
 
-    <ul class="user-links">
-    <% if user_signed_in? %>
-      <li><%= link_to current_user.name, edit_user_registration_path(current_user) %></li>
-      <li><%= link_to('logout', destroy_user_session_path, :method => :delete) %></li>
-    <% else %>
-      <li><%= link_to('login', new_user_session_path)  %></li>
+      <ul class="user-links">
+      <% if user_signed_in? %>
+        <li><%= link_to current_user.name, edit_user_registration_path(current_user) %></li>
+        <li><%= link_to('logout', destroy_user_session_path, :method => :delete) %></li>
+      <% else %>
+        <li><%= link_to('login', new_user_session_path)  %></li>
+      <% end %>
+      </ul>
+    </header>
+
+    <% if flash.notice %>
+      <div class="flash notice">
+        <p class="notice"><%= notice %></p>
+      </div>
     <% end %>
-    </ul>
-  </header>
+    <% if flash.alert %>
+      <div class="flash alert">
+        <p class="alert"><%= alert %></p>
+      </div>
+    <% end %>
 
-  <% if flash.notice %>
-    <div class="flash notice">
-      <p class="notice"><%= notice %></p>
+    <div class="content">
+      <%= yield %>
     </div>
-  <% end %>
-  <% if flash.alert %>
-    <div class="flash alert">
-      <p class="alert"><%= alert %></p>
-    </div>
-  <% end %>
-
-  <div class="content">
-    <%= yield %>
   </div>
 
   <footer>

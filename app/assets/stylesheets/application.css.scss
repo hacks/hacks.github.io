@@ -4,7 +4,8 @@
  *= require_tree .
  */
 
-body {
+html, body {
+  height: 100%;
   font-family: monospace;
   margin: 0 100px;
   background-color: #090909;
@@ -23,6 +24,12 @@ a {
   border-bottom: 1px solid #fdffcb;
 }
 
+
+.container {
+  height: 100%;
+  margin-bottom: -40px; // for footer
+  position: relative;
+}
 
 header {
   padding: 10px;
@@ -74,7 +81,7 @@ header .user-links {
 
 footer {
   width: 100%;
-  position: absolute;
+  position: relative;
   bottom: 0;
   text-align: center;
 
