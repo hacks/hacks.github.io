@@ -1,0 +1,24 @@
+<h1>New event</h1>
+
+<%= form_for @event do |f| %>
+
+  <% @event.errors.each do |field, mess| %>
+    <%= "#{field} #{mess}" %><br />
+  <% end %>
+  <br />
+
+  <%= f.label :name %><br />
+  <%= f.text_field :name %><br />
+
+  <%= f.label :datetime %><br />
+  <%= f.datetime_select :datetime %><br />
+
+  <%= f.label :description %><br />
+  <%= f.text_area :description, :rows => 7 %><br />
+
+  <%= f.label :tags %><br />
+  <%= f.text_field :tags %><br />
+
+  <%= f.submit "Create event" %>
+
+<% end %>

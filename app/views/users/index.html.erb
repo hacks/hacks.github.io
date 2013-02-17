@@ -7,7 +7,7 @@
       <%= twitter_link(user, :icon => true) %>
       <%= github_link(user, :icon => true) %>
     </div>
-    <%= link_to user.name, user_path(user) %>
+    <%= link_to user.name, user_path(user) %><%= "*" if user.admin %>
   </li>
 <% end %>
 </ul>
