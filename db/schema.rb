@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(:version => 20130216064655) do
     t.string   "name"
     t.datetime "datetime"
     t.text     "description"
-    t.string   "tag"
+    t.string   "tags"
     t.integer  "user_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false

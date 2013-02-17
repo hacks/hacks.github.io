@@ -1,3 +1,26 @@
-// Place all the styles related to the site controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.events {
+
+  ul { padding: 0; }
+
+  ul li {
+    display: inline-block;
+    list-style: none;
+    margin-right: 10px;
+    border: 1px solid #eee;
+
+    .title {
+      padding: 10px;
+      border-bottom: 1px solid #eee;
+      h1 {
+        margin: 0;
+        font-size: 20px;
+        font-weight: bold;
+      }
+    }
+
+    .info {
+      padding: 10px;
+    }
+  }
+
+}

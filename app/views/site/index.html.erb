@@ -3,3 +3,18 @@
 <p>we meet up every Thursday from 8pm to 12am in 016 <a href="http://goo.gl/maps/vz3g2" target="_blank">International Village</a> to hang out, talk about tech, and work on projects</p>
 
 <p>if you like making, breaking, hacking, building, designing, technology, security, art, and/or general awesomeness, you should hang with us</p>
+
+<div class="events">
+  <h3>Upcoming events</h3>
+  <ul>
+  <% @events.each do |event| %>
+    <li>
+      <div class="title">
+        <h1><%= event.name %><br /></h1>
+        <%= event.datetime.strftime("%A, %b %d at %l%p") %>
+      </div>
+      <div class="info"><%= event.description %></div>
+    </li>
+  <% end %>
+  </ul>
+</div>
