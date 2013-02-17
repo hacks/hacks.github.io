@@ -20,6 +20,10 @@ Nuhacks::Application.configure do
   # Generate digests for assets URLs
   config.assets.digest = true
 
+  # Devise recommends this for Heroku deployment
+  config.assets.initialize_on_precompile = false
+
+  raise
   config.assets.precompile = ['*.js', '*.css']
 
   # Defaults to nil and saved in location specified by config.assets.prefix
