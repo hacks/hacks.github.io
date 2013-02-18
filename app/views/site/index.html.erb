@@ -7,8 +7,8 @@
 <div class="events">
   <h3>Upcoming events</h3>
   <ul>
-  <% @events.each do |event| %>
-    <li>
+  <% @events[0..4].each do |event| %>
+    <li class="event">
       <div class="title">
         <h1><%= event.name %><br /></h1>
         <%= event.datetime.strftime("%A, %b %d at %l%p") %>
