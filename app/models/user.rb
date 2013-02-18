@@ -1,15 +1,15 @@
 class User < ActiveRecord::Base
-  # Include default devise modules. Others available are:
-  # :token_authenticatable, :confirmable,
-  # :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me,
-  :name, :github, :twitter
+                  :name, :github, :twitter
 
   has_many :events
 
-  validates_presence_of :name
+  validates :name, :presence => true, :uniqueness => true
+  validates :twitter, :format => { :with => /^[A-Za-z0-9_]{1,15}$/ },
+                      :allow_blank => true
+  validates :github, :format => { :with => /^[a-zA-Z0-9][a-zA-Z0-9-]{1,39}$/ },
+                      :allow_blank => true
 end

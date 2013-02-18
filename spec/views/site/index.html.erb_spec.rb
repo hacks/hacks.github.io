@@ -2,10 +2,10 @@ require "spec_helper"
 
 describe "site/index.html.erb" do
 
-  before(:all) do
+  before(:each) do
     assign(:events, FactoryGirl.create_list(:event, 20))
+    render
   end
-  before { render }
 
   subject { Capybara::Node::Simple.new(rendered) }
 

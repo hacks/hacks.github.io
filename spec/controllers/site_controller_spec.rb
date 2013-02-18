@@ -3,7 +3,11 @@ require 'spec_helper'
 describe SiteController do
 
   before(:all) do
-    FactoryGirl.create_list(:event, 20)
+    @events = FactoryGirl.create_list(:event, 20)
+  end
+
+  after(:all) do
+    @events.each { |e| e.destroy }
   end
 
   let(:event) { FactoryGirl.create(:event) }
