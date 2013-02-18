@@ -10,11 +10,11 @@ describe "layouts/application.html.erb" do
     end
 
     it "has a link to projects" do
-      should have_link('projects', :href => '/projects')
+      should have_link('projects', :href => projects_path)
     end
 
     it "has a link to users" do
-      should have_link('users', :href => '/users')
+      should have_link('users', :href => users_path)
     end
   end
 
@@ -37,7 +37,7 @@ describe "layouts/application.html.erb" do
     end
 
     it "has the users name" do
-      should have_content('User Name')
+      should have_content(user.name)
     end
 
     it "has a logout link" do
