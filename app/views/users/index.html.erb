@@ -1,13 +1,15 @@
-<h1>nuhackers</h1>
-<ul class="users">
-<% @users.each do |user| %>
-  <li>
-    <div class="external-links">
-      <%= email_link(user, :icon => true) %>
-      <%= twitter_link(user, :icon => true) %>
-      <%= github_link(user, :icon => true) %>
-    </div>
-    <%= link_to user.name, user_path(user) %><%= "*" if user.admin %>
-  </li>
-<% end %>
-</ul>
+<div class="container">
+  <h1>nuhackers</h1>
+  <ul class="users">
+  <% @users.each do |user| %>
+    <li>
+      <div class="external-links">
+        <%= email_link(user, :icon => true) %>
+        <%= twitter_link(user, :icon => true) %>
+        <%= github_link(user, :icon => true) %>
+      </div>
+      <%= link_to user.name, user_path(user) %><%= "*" if user.admin %>
+    </li>
+  <% end %>
+  </ul>
+</div>

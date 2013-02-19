@@ -8,44 +8,22 @@
 </head>
 <body>
 
-  <div class="container">
-    <header>
-      <%= logo %>
-
-      <ul>
-        <li><a href="#">projects</a></li>
-        <li><%= link_to "users", users_path %></li>
-      </ul>
-
-      <ul class="user-links">
-      <% if user_signed_in? %>
-        <li><%= link_to current_user.name, edit_user_registration_path(current_user) %></li>
-        <li><%= link_to('logout', destroy_user_session_path, :method => :delete) %></li>
-      <% else %>
-        <li><%= link_to('login', new_user_session_path)  %></li>
-      <% end %>
-      </ul>
-    </header>
-
+  <div class="flashes">
     <% if flash.notice %>
-      <div class="flash notice">
-        <p class="notice"><%= notice %></p>
-      </div>
+    <div class="flash notice">
+      <p class="notice"><%= notice %></p>
+    </div>
     <% end %>
     <% if flash.alert %>
-      <div class="flash alert">
-        <p class="alert"><%= alert %></p>
-      </div>
-    <% end %>
-
-    <div class="content">
-      <%= yield %>
+    <div class="flash alert">
+      <p class="alert"><%= alert %></p>
     </div>
+    <% end %>
   </div>
 
-  <footer>
-    <p>we're underground and cool cause we use black background and monospace fonts</p>
-  </footer>
+  <div class="wrapper">
+    <%= yield %>
+  </div>
 
 </body>
 </html>

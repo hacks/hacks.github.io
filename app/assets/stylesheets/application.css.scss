@@ -5,9 +5,8 @@
  */
 
 html, body {
-  height: 100%;
   font-family: monospace;
-  margin: 0 100px;
+  margin: 0;
   background-color: #090909;
   color: #eee;
 }
@@ -24,68 +23,68 @@ a {
   border-bottom: 1px solid #fdffcb;
 }
 
-
-.container {
-  height: 100%;
-  margin-bottom: -40px; // for footer
-  position: relative;
-}
-
-header {
-  padding: 10px;
-}
-
-header pre {
+.logo {
   color: #f2543d;
-  text-align: center;
 }
 
-header ul {
-  display: inline-block;
-  padding: 0;
-  margin: 0 0 10px 0;
+/*
+Site Layout
 
-  li {
-    display: inline-block;
-    list-style-type: none;
+Container gets 560px + 15 + 25 (padding) + 5*2 (border) = 610px
+Sidebar gets 240px 15*2 (padding) + 10 (margin-right) = 280px
+Wrapper therefor must be 890px
+
+When the sidebar is not there, the Container will use all the space.
+
+*/
+
+.wrapper {
+  margin: 0 auto;
+  width: 890px;
+}
+
+// Must be used in each view that wants this.
+// SHOULD BE USED WITH .container as a sibling
+.sidebar {
+  width: 240px;
+  float: left;
+  padding: 0 15px;
+  margin-right: 10px;
+}
+
+// Must be used in each view that wants this.
+.container {
+  overflow: hidden;
+  padding: 0 15px 15px 25px;
+  min-width: 560px;
+  margin: 0 auto;
+  border-bottom: 5px solid #595959;
+  border-top: none;
+  box-shadow: inset 0 -1px 1px 0 #111, 0 3px 10px #000;
+  background-color: #272822;
+}
+
+// Sitewide flashes
+.flashes {
+  position: absolute;
+  left: 0;
+  right: 0;
+
+  .flash {
+    padding: 5px;
+    p {
+      text-align: center;
+      margin: 0;
+    }
   }
-}
 
-header .user-links {
-  float: right;
-}
-
-.flash {
-  padding: 5px;
-
-  &.notice {
+  .flash.notice {
     color: #514721;
-    border: 3px solid darken(#ffff00, 25%);
     background-color: #ffff00;
   }
 
-  &.alert {
+  .flash.alert {
     color: #ffeeee;
-    border: 3px solid lighten(#ff0000, 25%);
     background-color: #ff0000;
-  }
-
-  p {
-    margin: 0;
-  }
-}
-
-.content {
-  margin: 0 100px;
-}
-
-footer {
-  width: 100%;
-  position: relative;
-  bottom: 0;
-  text-align: center;
-
-  p {
-    font-size: 12px;
   }
 }
