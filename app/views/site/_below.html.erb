@@ -1,0 +1,16 @@
+<div class="below">
+  <div class="events">
+    <!-- <header>Upcoming Events</header> -->
+
+    <% @events[0..4].each do |event| %>
+      <div class="event">
+        <div class="title">
+          <h1><%= event.name %></h1>
+          <span><%= event.datetime.strftime("%A, %b %d at %l%p") %></span>
+        </div>
+        <div class="body"><p><%= event.description %></p></div>
+      </div>
+    <% end %>
+
+  </div>
+</div>
