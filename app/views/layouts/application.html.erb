@@ -8,21 +8,46 @@
 </head>
 <body>
 
-  <div class="flashes">
-    <% if flash.notice %>
-    <div class="flash notice">
-      <p class="notice"><%= notice %></p>
-    </div>
-    <% end %>
-    <% if flash.alert %>
-    <div class="flash alert">
-      <p class="alert"><%= alert %></p>
-    </div>
-    <% end %>
-  </div>
-
   <div class="wrapper">
-    <%= yield %>
+
+    <div class="container">
+      <div class="flashes">
+        <% if flash.notice %>
+          <div class="flash notice">
+            <p class="notice"><%= notice %></p>
+          </div>
+        <% end %>
+        <% if flash.alert %>
+          <div class="flash alert">
+            <p class="alert"><%= alert %></p>
+          </div>
+        <% end %>
+      </div>
+
+      <ul class="nav">
+        <ul>
+          <li><%= link_to "nuhacks", root_path, :class => 'logo' %></li>
+          <li><%= link_to "users", users_path %></li>
+          <li><%= link_to "projects", '#' %></li>
+        </ul>
+        <ul class="pull-right">
+          <% if user_signed_in? %>
+            <li><%= link_to current_user.name, user_path(current_user) %></li>
+            <li><%= link_to('logout', destroy_user_session_path, :method => :delete) %></li>
+          <% else %>
+            <li><%= link_to('login', new_user_session_path)  %></li>
+          <% end %>
+        </ul>
+      </ul>
+
+      <div class="body">
+        <%= yield %>
+      </div>
+    </div>
+
+    <!-- Every controller contect can have it's own sidebar. Or none. -->
+    <%= render "below" rescue nil %>
+
   </div>
 
 </body>

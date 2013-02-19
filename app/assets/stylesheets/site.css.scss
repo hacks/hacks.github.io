@@ -1,30 +1,33 @@
+@import "application";
+
 .events {
   header {
-    padding: 10px 0;
+    padding: 25px 0 5px;
     font-size: 24px;
     font-weight: bold;
   }
 
   .event {
+    display: inline-block;
+    max-width: 250px;
     margin: 10px auto 0;
     padding: 10px;
-    box-shadow: inset 0 -1px 1px 0 #111, 0 3px 10px #000;
-    background-color: #272822;
-    border-bottom: 5px solid #595959;
+    @extend .frame;
+
+    &:first-child {
+      margin-top: 40px;
+    }
 
     .title h1 {
       margin: 0;
       font-size: 24px;
     }
 
-    .title p {
+    .title span {
+      display: block;
       margin: 5px 0 10px;
       font-size: 14px;
       font-weight: thin;
-    }
-
-    .body {
-      color: #999;
     }
   }
 }

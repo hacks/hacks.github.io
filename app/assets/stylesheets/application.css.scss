@@ -4,18 +4,27 @@
  *= require_tree .
  */
 
+/*
+Site Styles
+*/
+
 html, body {
-  font-family: monospace;
+  font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
   margin: 0;
-  background-color: #090909;
-  color: #eee;
+  background-color: #e6e6e6;
+  color: #f8f8f2;
 }
 
-h1 { font-size: 42px; }
-h2 { font-size: 38px; }
+h1 { font-size: 38px; }
+h2 { font-size: 32px; }
 h3 { font-size: 26px; }
 h4 { font-size: 20px; }
-p { font-size: 16px; }
+p {
+  margin-bottom: 5px;
+  color: #73715d;
+  line-height: 1.4em;
+  font-size: 14px;
+}
 
 a {
   color: #fdffcb;
@@ -25,6 +34,9 @@ a {
 
 .logo {
   color: #f2543d;
+}
+a.logo {
+  border-bottom: 1px solid #f2543d;
 }
 
 /*
@@ -43,30 +55,48 @@ When the sidebar is not there, the Container will use all the space.
   width: 890px;
 }
 
-// Must be used in each view that wants this.
-// SHOULD BE USED WITH .container as a sibling
-.sidebar {
-  width: 240px;
-  float: left;
-  padding: 0 15px;
-  margin-right: 10px;
+.frame {
+  border-bottom: 5px solid #595959;
+  border-top: none;
+  box-shadow: inset 0 -1px 1px 0 #111, 0 3px 10px #222;
+  background-color: #272822;
 }
 
 // Must be used in each view that wants this.
 .container {
-  overflow: hidden;
-  padding: 0 15px 15px 25px;
-  min-width: 560px;
+  position: relative;
   margin: 0 auto;
-  border-bottom: 5px solid #595959;
-  border-top: none;
-  box-shadow: inset 0 -1px 1px 0 #111, 0 3px 10px #000;
-  background-color: #272822;
+  @extend .frame;
+
+  .nav {
+    padding: 10px;
+    margin: 0;
+    background-color: #171814;
+    border-bottom: 1px solid #3c3d39;
+    box-shadow: inset 0 -1px 1px 0 #000;
+
+    ul {
+      display: inline-block;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      margin-right: 10px;
+      display: inline-block;
+    }
+  }
+
+  .body {
+    padding: 0 20px 15px;
+  }
+
 }
 
 // Sitewide flashes
 .flashes {
   position: absolute;
+  top: 35px; // hard coded height of nav.
   left: 0;
   right: 0;
 
