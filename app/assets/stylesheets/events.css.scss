@@ -1,3 +1,33 @@
-// Place all the styles related to the events controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "application";
+
+.events {
+  header {
+    padding: 25px 0 5px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .event {
+    display: inline-block;
+    max-width: 250px;
+    margin: 10px auto 0;
+    padding: 10px;
+    @extend .frame;
+
+    &:first-child {
+      margin-top: 40px;
+    }
+
+    .title h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    .title span {
+      display: block;
+      margin: 5px 0 10px;
+      font-size: 14px;
+      font-weight: thin;
+    }
+  }
+}

@@ -35,9 +35,6 @@ a {
 .logo {
   color: #f2543d;
 }
-a.logo {
-  border-bottom: 1px solid #f2543d;
-}
 
 /*
 Site Layout
@@ -74,6 +71,10 @@ When the sidebar is not there, the Container will use all the space.
     background-color: #171814;
     border-bottom: 1px solid #3c3d39;
     box-shadow: inset 0 -1px 1px 0 #000;
+
+    a {
+      border-bottom: 0;
+    }
 
     ul {
       display: inline-block;
