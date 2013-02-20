@@ -1,0 +1,2 @@
+before_script:
+  - psql -c 'create database nuhacks_test;' -U postgres
