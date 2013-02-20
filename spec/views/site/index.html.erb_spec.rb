@@ -4,13 +4,13 @@ describe "site/index.html.erb" do
 
   before(:each) do
     assign(:events, FactoryGirl.create_list(:event, 20))
-    render
+    render :template => 'site/index', :layout => 'layouts/application'
   end
 
   subject { Capybara::Node::Simple.new(rendered) }
 
   it "has a header" do
-    should have_selector('h1')
+    should have_selector('h1', :text => /make what you .* what you make/)
   end
 
   it "has some copy" do

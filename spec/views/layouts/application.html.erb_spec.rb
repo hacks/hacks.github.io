@@ -9,10 +9,6 @@ describe "layouts/application.html.erb" do
       render :text => nil, :layout => 'layouts/application'
     end
 
-    it "has a link to projects" do
-      should have_link('projects', :href => projects_path)
-    end
-
     it "has a link to users" do
       should have_link('users', :href => users_path)
     end
