@@ -73,7 +73,6 @@ When the sidebar is not there, the Container will use all the space.
 
 // Must be used in each view that wants this.
 .container {
-  position: relative;
   margin: 0 auto;
   @extend .frame;
 
@@ -108,10 +107,6 @@ When the sidebar is not there, the Container will use all the space.
 
 // Sitewide flashes
 .flashes {
-  position: absolute;
-  top: 35px; // hard coded height of nav.
-  left: 0;
-  right: 0;
 
   .flash {
     padding: 5px;
