@@ -1,22 +1,27 @@
 @import "application";
 
+/*
+Site#index sites css
+*/
+
 .events {
-  header {
-    padding: 25px 0 5px;
+  margin-top: 20px;
+
+  h1 {
     font-size: 24px;
     font-weight: bold;
   }
 
   .event {
-    display: inline-block;
-    max-width: 250px;
-    margin: 10px auto 0;
-    padding: 10px;
     @extend .frame;
-
-    &:first-child {
-      margin-top: 40px;
-    }
+    margin-right: 10px;
+    float: left;
+    max-width: 250px;
+    min-height: 150px;
+    height: 150px;
+    padding: 20px;
+    overflow: hidden;
+    color: #f8f8f2;
 
     .title h1 {
       margin: 0;
@@ -25,9 +30,13 @@
 
     .title span {
       display: block;
-      margin: 5px 0 10px;
+      margin: 5px 0;
       font-size: 14px;
       font-weight: thin;
+    }
+
+    .body p {
+      margin: 0;
     }
   }
 }

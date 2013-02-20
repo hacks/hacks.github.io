@@ -1,3 +1,8 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
+jQuery ->
+
+  $('.event').hover ->
+    h = $(this).css('height','auto').height()
+    $(this).css('height','150px')
+    $(this).animate({height : h}, 'fast')
+  , ->
+    $(this).animate({height : '150px'}, 'fast')
