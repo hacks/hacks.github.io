@@ -11,4 +11,4 @@ script:
   - bundle exec rspec spec/
 before_script:
   - psql -c 'create database nuhacks_test' -U postgres
-# bundler_args: --binstubs=./bundler_stubs
+bundler_args: --without development
