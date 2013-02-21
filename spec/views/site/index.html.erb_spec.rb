@@ -2,7 +2,7 @@ require "spec_helper"
 
 describe "site/index.html.erb" do
 
-  before(:all) { assign(:events, FactoryGirl.create_list(:event, 20)) }
+  before(:all) { assign(:upcoming_events, FactoryGirl.create_list(:event, 20)) }
   after(:all) { User.destroy_all } # users should destroy thier events
   before { render :template => 'site/index', :layout => 'layouts/application' }
 
