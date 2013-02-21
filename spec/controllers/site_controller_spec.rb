@@ -2,15 +2,8 @@ require 'spec_helper'
 
 describe SiteController do
 
-  before(:all) do
-    @events = FactoryGirl.create_list(:event, 20)
-  end
-
-  after(:all) do
-    @events.each { |e| e.destroy }
-  end
-
-  let(:event) { FactoryGirl.create(:event) }
+  before(:all) { @events = FactoryGirl.create_list(:event, 20) }
+  after(:all)  { User.destroy_all } # destroys all users and thier events
 
   describe "GET index" do
     before(:each) do
@@ -22,13 +15,17 @@ describe SiteController do
     end
 
     it "has at least 1 event" do
-      assigns(:events).size.should >= 1
+      assigns(:upcoming_events).size.should >= 1
     end
 
     it "does not have past events" do
-      assigns(:events).each do |event|
+      assigns(:upcoming_events).each do |event|
         event.datetime.should > DateTime.now.beginning_of_day
       end
+    end
+
+    it "renders site/index" do
+      page.should render_template("site/index")
     end
   end
 

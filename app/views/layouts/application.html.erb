@@ -10,7 +10,7 @@
 
   <div class="wrapper">
 
-    <div class="container">
+    <div class="container frame">
       <div class="flashes">
         <% if flash.notice %>
           <div class="flash notice">
@@ -28,7 +28,6 @@
         <ul>
           <li><%= link_to "nuhacks", root_path, :class => 'logo' %></li>
           <li><%= link_to "users", users_path %></li>
-          <li><%= link_to "projects", '#' %></li>
         </ul>
         <ul class="pull-right">
           <% if user_signed_in? %>

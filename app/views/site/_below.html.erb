@@ -1,8 +1,8 @@
 <div class="events">
   <h1/>upcoming events</h1>
 
-  <% @events[0..4].each do |event| %>
-    <%= link_to event_path(event), :class => 'event clickable' do %>
+  <% @upcoming_events[0..4].each do |event| %>
+    <%= link_to event_path(event), :class => 'event frame clickable' do %>
       <div class="title">
         <h1><%= event.name %></h1>
         <span><%= event.datetime.strftime("%A, %b %d at %l%p") %></span>

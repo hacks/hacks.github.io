@@ -2,7 +2,8 @@ require 'spec_helper'
 
 describe UsersController do
 
-  let(:user) { FactoryGirl.create(:user) }
+  before(:all) { @user = FactoryGirl.create(:user) }
+  after(:all)  { @user.destroy }
 
   describe "GET index" do
     before(:each) do
@@ -17,7 +18,7 @@ describe UsersController do
   describe "GET show" do
     context "valid id" do
       before(:each) do
-        get :show, :id => user.id
+        get :show, :id => @user.id
       end
 
       it "has a status of 200" do

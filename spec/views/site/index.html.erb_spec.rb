@@ -2,10 +2,9 @@ require "spec_helper"
 
 describe "site/index.html.erb" do
 
-  before(:each) do
-    assign(:events, FactoryGirl.create_list(:event, 20))
-    render :template => 'site/index', :layout => 'layouts/application'
-  end
+  before(:all) { assign(:events, FactoryGirl.create_list(:event, 20)) }
+  after(:all) { User.destroy_all } # users should destroy thier events
+  before { render :template => 'site/index', :layout => 'layouts/application' }
 
   subject { Capybara::Node::Simple.new(rendered) }
 
