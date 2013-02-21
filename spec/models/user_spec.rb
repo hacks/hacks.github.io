@@ -27,13 +27,7 @@ describe User do
   end
 
   describe '#password' do
-    [
-      'nathan', 'bob-smith', 'kin13-fo-1', 'a'*128, '713&*@!^#hjsa>,`~'
-    ].each { |e| it { should allow_value(e).for(:password) } }
-
-    [
-      '', ' ', 'a', 'sad', 'sfaw1', 'a'*129
-    ].each { |e| it { should_not allow_value(e).for(:password) } }
+    it { should ensure_length_of(:password).is_at_least(6) }
   end
 
   describe '#github' do

@@ -1,0 +1,40 @@
+<%= form_for @user do |f| %>
+  <h3>Log in</h3>
+
+  <div>
+    <%= f.label :firstname, "first name", :required => true %>
+    <%= f.text_field :firstname, :autofocus => true %>
+  </div>
+
+  <div>
+    <%= f.label :lastname, "last name", :required => true %>
+    <%= f.text_field :lastname %>
+  </div>
+
+  <div>
+    <%= f.label :email, "email", :required => true %>
+    <%= f.text_field :email %>
+  </div>
+
+  <div>
+    <%= f.label :password, "password", :required => true %>
+    <%= f.password_field :password %>
+  </div>
+
+  <div>
+    <%= f.label :password_confirmation, "password confirmation", :required => true %>
+    <%= f.password_field :password_confirmation %>
+  </div>
+
+  <div>
+    <%= f.label :twitter, "twitter" %>
+    <%= f.text_field :twitter %>
+  </div>
+
+  <div>
+    <%= f.label :github, "github" %>
+    <%= f.text_field :github %>
+  </div>
+
+  <%= f.submit "sign up" %>
+<% end %>

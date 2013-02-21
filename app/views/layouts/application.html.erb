@@ -30,11 +30,11 @@
           <li><%= link_to "users", users_path %></li>
         </ul>
         <ul class="pull-right">
-          <% if user_signed_in? %>
+          <% if logged_in? %>
             <li><%= link_to current_user.name, user_path(current_user) %></li>
-            <li><%= link_to('logout', destroy_user_session_path, :method => :delete) %></li>
+            <li><%= link_to('logout', logout_path, :method => :delete) %></li>
           <% else %>
-            <li><%= link_to('login', new_user_session_path)  %></li>
+            <li><%= link_to('login', login_path)  %></li>
           <% end %>
         </ul>
       </ul>
@@ -44,7 +44,6 @@
       </div>
     </div>
 
-    <!-- Every controller contect can have it's own sidebar. Or none. -->
     <%= render "below" rescue nil %>
 
   </div>

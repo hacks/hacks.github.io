@@ -2,8 +2,8 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.11'
 gem 'pg'
-gem 'devise'
 gem 'thin'
+gem 'bcrypt-ruby'
 
 group :development, :test do
   gem 'rspec-rails'

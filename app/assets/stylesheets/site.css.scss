@@ -43,6 +43,39 @@ a {
   }
 }
 
+form {
+  margin: 0 auto;
+  padding: 10px;
+  width: 350px;
+
+  /* http://stackoverflow.com/questions/8951822/combine-css-attribute-and-pseudo-element-selectors */
+  label[required] {
+    visibility: visible;
+  }
+  label[required]:after {
+    content: " *";
+  }
+
+  input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  input[type="submit"] {
+    color: #111;
+    width: 103%;
+    margin: 10px 0;
+    font-size: 14px;
+    height: 30px;
+    border: none;
+    background-color: #f2543d;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
 /*
 Site Layout
 */

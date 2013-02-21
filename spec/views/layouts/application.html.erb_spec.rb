@@ -40,7 +40,7 @@ describe "layouts/application.html.erb" do
     end
 
     it "has a login link" do
-      should have_link('login', new_user_session_path)
+      should have_link('login', login_path)
     end
   end
 
@@ -48,7 +48,7 @@ describe "layouts/application.html.erb" do
     before(:all) { @user = FactoryGirl.create(:user) }
     after(:all) { @user.destroy }
     before do
-      sign_in :user, @user
+      authenticate(@user, @user.password)
       render :text => nil, :layout => 'layouts/application'
     end
 
@@ -57,7 +57,7 @@ describe "layouts/application.html.erb" do
     end
 
     it "has a logout link" do
-      should have_link('logout', :href => destroy_user_session_path)
+      should have_link('logout', :href => logout_path)
     end
   end
 
