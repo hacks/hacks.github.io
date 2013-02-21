@@ -34,7 +34,8 @@ class DeviseCreateUsers < ActiveRecord::Migration
       # t.string :authentication_token
 
       t.boolean :admin
-      t.string :name
+      t.string :firstname
+      t.string :lastname
       t.string :email
       t.string :github
       t.string :twitter

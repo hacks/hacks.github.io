@@ -35,7 +35,8 @@ ActiveRecord::Schema.define(:version => 20130216064655) do
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
     t.boolean  "admin"
-    t.string   "name"
+    t.string   "firstname"
+    t.string   "lastname"
     t.string   "github"
     t.string   "twitter"
     t.datetime "created_at",                             :null => false
