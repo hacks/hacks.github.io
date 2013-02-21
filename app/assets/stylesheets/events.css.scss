@@ -1,9 +1,3 @@
-@import "application";
-
-/*
-Site#index sites css
-*/
-
 .events {
   margin-top: 20px;
 
@@ -13,7 +7,6 @@ Site#index sites css
   }
 
   .event {
-    @extend .frame;
     margin-right: 10px;
     float: left;
     max-width: 250px;
