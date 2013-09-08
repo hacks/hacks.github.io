@@ -2,24 +2,27 @@
 
 body {
   margin: 0;
-  padding: 0.6em;
+  padding: 1em 0.6em;
   background: #000;
   font-size: 1.6em;
+  line-height: 155%;
   color: #fff;
+  font-family: "Proxima Nova", Helvetica, sans-serif;
 }
 
 #main {
   width: 480px;
 }
 
-p, ul {
-  margin: 2em 0;
-}
-
 h1 {
   display: inline;
   padding: 0 0.1em;
   background: #F2543D;
+  font-weight: 800;
+}
+
+p, ul {
+  font-weight: 300;
 }
 
 a {
@@ -31,6 +34,7 @@ a {
 a:hover {
   background: #84C2FF;
   color: #FFF;
+  text-decoration: none;
 }
 
 ul {
