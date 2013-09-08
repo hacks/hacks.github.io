@@ -1,30 +1,36 @@
 /* hax hax hax hax hax errybody! */
 
 body {
+  margin: 0;
+  padding: 0.6em;
   background: #000;
-  text-align: center;
-  padding: 2em 0;
   font-size: 1.6em;
-  font-family: monospace;
   color: #fff;
 }
 
 #main {
-  width: 600px;
-  margin: 0 auto;
+  width: 480px;
 }
 
-pre, p, ul, form {
+p, ul {
   margin: 2em 0;
 }
 
-pre {
-  font-size: 0.619em;
-  color: #F2543D;
+h1 {
+  display: inline;
+  padding: 0 0.1em;
+  background: #F2543D;
 }
 
 a {
-  color: #84c2ff;
+  padding: 0.1em 0.2em;
+  color: #84C2FF;
+  text-decoration: none;
+}
+
+a:hover {
+  background: #84C2FF;
+  color: #FFF;
 }
 
 ul {
@@ -32,27 +38,6 @@ ul {
   padding: 0;
 }
 
-footer { color: transparent; }
-
-/** Newsletter signup form */
-input {
-  font-family: monospace;
-  border: none;
-  background: none;
-  font-size: 1em;
-}
-
-input[type="email"] {
-  border-bottom: 2px #fff dashed;
-  outline: none;
-  color: #fff;
-}
-
-input[type="submit"] {
-  color: #000;
-  background: #84c2ff;
-}
-
-input[type="submit"]:hover {
-  cursor: pointer;
+footer {
+  display: none;
 }
