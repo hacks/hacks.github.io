@@ -11,7 +11,8 @@ body {
 }
 
 #main {
-  width: 480px;
+  max-width: 480px;
+  min-width: 400px;
 }
 
 h1 {
