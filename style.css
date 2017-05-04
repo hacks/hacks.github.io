@@ -15,6 +15,15 @@ body {
   min-width: 400px;
 }
 
+#error {
+  text-align: center;
+}
+
+#error .hacktopus {
+  width: 100%;
+  max-width: 500px;
+}
+
 h1 {
   display: inline;
   padding: 0 0.1em;
