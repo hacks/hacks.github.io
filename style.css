@@ -46,6 +46,10 @@ a:hover {
   color: #FFF;
 }
 
+h1>a:hover {
+    background: none;
+}
+
 ul {
   list-style-type: none;
   padding: 0;
