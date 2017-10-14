@@ -31,6 +31,16 @@ h1 {
   font-weight: 800;
 }
 
+/*// specifically just the page title...*/
+h1 > a {
+  color: white;
+}
+
+h1 > a:hover {
+  background: none;
+  color: #ddd;
+}
+
 p, ul {
   font-weight: 300;
 }
