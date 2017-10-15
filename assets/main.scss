@@ -71,9 +71,14 @@ ul {
     padding: 20px;
 }
 
+.align-bottom {
+    margin-top: auto;
+}
+
 .down-arrow {
     height: 100px;
-    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
     animation: pulse 4s infinite ease-in-out alternate;
 
     margin-bottom: 10px;
@@ -84,14 +89,29 @@ ul {
     }
 }
 
-.column {
+.row {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 #information {
     @extend .full-page;
     background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        padding: 32px 32px 0 32px;
+        width:100%;
+        .long-blurb {
+            width: 50vw;
+        }
+    }
+
+    #mentors {
+        width: 25vw;
+    }
 }
 
 #announcements {
