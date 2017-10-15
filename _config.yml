@@ -39,3 +39,5 @@ exclude:
   - run_server.sh
   - README.md
   - CNAME
+  - cibuild
+  - old
