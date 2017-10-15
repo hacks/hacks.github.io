@@ -1,1 +1,5 @@
 .DS_Store
+run_server.sh
+.sass-cache/*
+_site/*
+Gemfile.lock
