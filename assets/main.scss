@@ -1,5 +1,6 @@
 ---
 ---
+// vim: ai:ts=4:sw=4:et
 @import "normalize";
 @import "github-corner";
 
@@ -22,6 +23,12 @@
         font-family: $header-font-family;
         color: $font-color;
     }
+}
+
+h1 {
+    @include respond-to(handhelds) { font-size: 16pt; }
+    @include respond-to(medium-screens) { font-size: 16pt; }
+    @include respond-to(wide-screens) { font-size: 24pt; }
 }
 
 p, a, ul, li{
@@ -49,13 +56,8 @@ ul {
 }
 
 
-// CSS for each page.
-
 .full-page {
     height: 100vh;
-    width: 100vw;
-    // max-width fixes the horizontal scroll bar issue
-    max-width: 100%;
     display: flex;
 }
 
@@ -66,15 +68,15 @@ ul {
     flex-direction: column;
     text-align: center;
     justify-content: center;
-    img {
-        margin-top: auto;
-    }
+    padding: 20px;
 }
 
 .down-arrow {
     height: 100px;
     margin-top: auto;
     animation: pulse 4s infinite ease-in-out alternate;
+
+    margin-bottom: 10px;
 
     @keyframes pulse {
         30% { opacity: 1; }
@@ -105,4 +107,12 @@ ul {
         height: $social-icon-size;
         padding: 0 4px;
     }
+}
+
+#hacktopus {
+    @include respond-to(handhelds) { width: 50vw; }
+    @include respond-to(medium-screens) { width: 60vw; }
+    @include respond-to(wide-screens) { width: 40vw; }
+    height: auto;
+    margin-top: 50px;
 }
