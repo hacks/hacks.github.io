@@ -55,24 +55,24 @@ ul {
     }
 }
 
+#quick-jump {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
 
 .full-page {
     height: 100vh;
     display: flex;
 }
 
-#introduction {
-    @extend .full-page;
-    background: radial-gradient(ellipse at top, #1B2735 0%, #090A0F 100%);
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    padding: 20px;
-}
 
 .align-bottom {
     margin-top: auto;
+    cursor: pointer;
 }
 
 .down-arrow {
@@ -93,6 +93,16 @@ ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+#introduction {
+    @extend .full-page;
+    background: radial-gradient(ellipse at top, #1B2735 0%, #090A0F 100%);
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    padding: 20px;
 }
 
 #information {
@@ -120,13 +130,42 @@ ul {
         }
     }
 
+    #social-icons {
+        a { text-decoration: none; }
+
+        svg {
+            width: $social-icon-size;
+            height: $social-icon-size;
+            padding: 0 4px;
+        }
+    }
 }
 
 #announcements {
     @extend .full-page;
     background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
-    aside {
-        text-align: right;
+
+
+    @include respond-to(handhelds) {
+        .row {
+            flex-direction: column;
+        }
+        height: 100%;
+    }
+    @include respond-to(medium-screens) {
+        .row {
+            flex-direction: column;
+        }
+        height: 100%;
+    }
+    @include respond-to(wide-screens) {
+        main {
+            width: 50vw;
+        }
+        aside {
+            width: 25vw;
+            text-align: right;
+        }
     }
 }
 
@@ -135,16 +174,6 @@ ul {
     flex-direction: column;
     padding: 32px 32px 0 32px;
     width:100%;
-}
-
-#social-icons {
-    a { text-decoration: none; }
-
-    svg {
-        width: $social-icon-size;
-        height: $social-icon-size;
-        padding: 0 4px;
-    }
 }
 
 #hacktopus {
