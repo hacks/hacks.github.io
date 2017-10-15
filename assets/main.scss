@@ -1,0 +1,107 @@
+---
+---
+
+@import "normalize";
+@import "github-corner";
+
+@mixin respond-to($media) {
+    @if $media == handhelds {
+        @media only screen and (max-width: $break-small) { @content; }
+    }
+    @else if $media == medium-screens {
+        @media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) { @content; }
+    }
+    @else if $media == wide-screens {
+        @media only screen and (min-width: $break-large) { @content; }
+    }
+}
+
+// Global items: h1 - h6, p, a, etc.
+
+@for $i from 1 through 6 {
+    h#{$i} {
+        font-family: $header-font-family;
+        color: $font-color;
+    }
+}
+
+p, a, ul, li{
+    color: $font-color;
+}
+
+svg {
+    fill: $font-color;
+}
+
+ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+
+    li {
+        padding-left: 1em;
+        text-indent: -1em;
+    }
+
+    li:before {
+        content: ">";
+        padding-right: 5px;
+    }
+}
+
+
+// CSS for each page.
+
+.full-page {
+    height: 100vh;
+    width: 100vw;
+    // max-width fixes the horizontal scroll bar issue
+    max-width: 100%;
+    display: flex;
+}
+
+#introduction {
+    @extend .full-page;
+    background: radial-gradient(ellipse at top, #1B2735 0%, #090A0F 100%);
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    img {
+        margin-top: auto;
+    }
+}
+.down-arrow {
+    height: 100px;
+    margin-top: auto;
+    animation: pulse 4s infinite ease-in-out alternate;
+
+    @keyframes pulse {
+        30% { opacity: 1; }
+        100% { opacity: 0; }
+    }
+}
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+#information {
+    @extend .full-page;
+    background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+}
+
+#announcements {
+    @extend .full-page;
+    background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+}
+
+#social-icons {
+    a { text-decoration: none; }
+
+    svg {
+        width: $social-icon-size;
+        height: $social-icon-size;
+        padding: 0 4px;
+    }
+}

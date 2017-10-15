@@ -1,0 +1,37 @@
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+title: NU Hacks
+email:
+description: The website for NUHacks, a Northeastern University student organization for hackers and makers.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://hacks.io"
+twitter_username: NUHacks
+github_username:  hacks
+github_repo: hacks/hacks.github.io/
+# permalink: /:short_year/:month/:title
+
+# Build settings
+markdown: kramdown
+kramdown:
+    syntax_highlighter: rouge
+    syntax_highlighter_opts:
+        block:
+            line_numbers: true
+
+defaults:
+    -
+        scope:
+            path: ""
+        values:
+            layout: "post"
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - reference
+  - run_server.sh

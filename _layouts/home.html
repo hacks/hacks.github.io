@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: " en " }}">
+{% include head.html %}
+
+<body>
+  {% include github-corner.html repo=site.github_repo %}
+  <section id="introduction">
+    <img src="/assets/hacktopus-web.png" />
+    <h1>If you like making, breaking, hacking, designing, building, and other creative-type things, you should hang with us.</h1>
+    <p>Thursdays 20:30&mdash;00:00 at
+      <a href="https://goo.gl/maps/uQA6kwf7M8Q2" target="_blank">International Village 022</a>
+    </p>
+    <img class="down-arrow" src="/assets/down-arrow.png" onclick="document.querySelector('#information').scrollIntoView({ behavior: 'smooth' });"/>
+  </section>
+
+  <section id="information">
+    <div class="column">
+      <main class="long-blurb">
+        <p>One of Hacks members’ favorite pastimes is trying to describe what Hacks is. Here are some that we think are memorable:</p>
+        <ul>
+          <li>Hacks is a place where cool people build cool stuff because it's cool</li>
+          <li>Tech tastemakers</li>
+          <li>We sit around and watch train videos</li>
+          <li>Social club for nerds</li>
+          <li>Hacks is like being swaddled inside of a maternity sweater while another person is also in that sweater. It’s warm
+            and snuggly and of course you both fit</li>
+          <li>You know, we sit around, hack the pentagon, usually with our ally, the hacker known as 4chan.</li>
+        </ul>
+        <h3>If you want to add your own description come to a hacks meeting or email
+          <a href="mailto:aronoff.j@husky.neu.edu">aronoff.j@husky.neu.edu</a>
+        </h3>
+      </main>
+
+      <div id="social-icons">
+        {% include icon-github.html username=site.github_username %}
+        {% include icon-twitter.html username=site.twitter_username %}
+      </div>
+    </div>
+
+    <aside id="mentors" class="column">
+      <!-- do some nice jekyll for loop here -->
+    </aside>
+  </section>
+
+  <section id="announcements">
+
+  </section>
+
+  <script src="/assets/smoothscroll.min.js"></script>
+</body>
+
+</html>
