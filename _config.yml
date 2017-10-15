@@ -37,3 +37,5 @@ exclude:
   - Gemfile.lock
   - reference
   - run_server.sh
+  - README.md
+  - CNAME
