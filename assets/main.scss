@@ -69,11 +69,20 @@ ul {
     img {
         margin-top: auto;
     }
+
+    mailing-list {
+        display:inline;
+    }
+}
+
+.align-bottom {
+    margin-top: auto;
 }
 
 .down-arrow {
     height: 100px;
-    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
     animation: pulse 4s infinite ease-in-out alternate;
 
     @keyframes pulse {
@@ -82,13 +91,14 @@ ul {
     }
 }
 
-.column {
+.row {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 #information {
     @extend .full-page;
+    flex-direction: column;
     background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
 }
 
