@@ -1,6 +1,5 @@
 ---
 ---
-
 @import "normalize";
 @import "github-corner";
 
@@ -71,6 +70,7 @@ ul {
         margin-top: auto;
     }
 }
+
 .down-arrow {
     height: 100px;
     margin-top: auto;
@@ -81,6 +81,7 @@ ul {
         100% { opacity: 0; }
     }
 }
+
 .column {
     display: flex;
     flex-direction: column;

@@ -7,8 +7,10 @@ description: The website for NUHacks, a Northeastern University student organiza
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://hacks.io"
 twitter_username: NUHacks
-github_username:  hacks
-github_repo: hacks/hacks.github.io/
+github_username: hacks
+github_repo: hacks/hacks.github.io
+discord_invite: https://discord.gg/Y4CqEYx
+fb_page: https://facebook.com/groups/nuhacks
 # permalink: /:short_year/:month/:title
 
 # Build settings

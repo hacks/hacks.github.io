@@ -5,12 +5,12 @@
 <body>
   {% include github-corner.html repo=site.github_repo %}
   <section id="introduction">
-    <img src="/assets/hacktopus-web.png" />
+    <img src="/assets/img/hacktopus-web.png" />
     <h1>If you like making, breaking, hacking, designing, building, and other creative-type things, you should hang with us.</h1>
     <p>Thursdays 20:30&mdash;00:00 at
       <a href="https://goo.gl/maps/uQA6kwf7M8Q2" target="_blank">International Village 022</a>
     </p>
-    <img class="down-arrow" src="/assets/down-arrow.png" onclick="document.querySelector('#information').scrollIntoView({ behavior: 'smooth' });"/>
+    <img class="down-arrow" src="/assets/img/down-arrow.png" onclick="document.querySelector('#information').scrollIntoView({ behavior: 'smooth' });"/>
   </section>
 
   <section id="information">
@@ -31,9 +31,12 @@
         </h3>
       </main>
 
+      <a href="http://eepurl.com/EFQcH">Join our mailing list!</a>
       <div id="social-icons">
         {% include icon-github.html username=site.github_username %}
         {% include icon-twitter.html username=site.twitter_username %}
+        {% include icon-discord.html invite_link=site.discord_invite %}
+        {% include icon-facebook.html fb_page=site.fb_page %}
       </div>
     </div>
 
