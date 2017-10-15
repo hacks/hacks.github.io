@@ -18,7 +18,7 @@
     <div class="container">
       <div class="row">
         <main class="long-blurb">
-          <h2>One of Hacks members’ favorite pastimes is trying to describe what Hacks is. Here are some that we think are memorable:</h2>
+          <h1>One of Hacks members’ favorite pastimes is trying to describe what Hacks is. Here are some that we think are memorable:</h1>
           <ul>
             <li>Hacks is a place where cool people build cool stuff because it's cool</li>
             <li>Tech tastemakers</li>
@@ -37,6 +37,7 @@
         <aside id="mentors">
           <h2>Need help? Ask our mentors!</h2>
           {% include mentors.md %}
+          <h3>Want a full list? Click <a href="http://mentors.hacks.io/">here</a>!</h3>
         </aside>
       </div>
 
@@ -53,8 +54,17 @@
 
   <section id="announcements">
     <div class="container">
-      <h2>Announcements</h2>
-      {% include announcements.md %}
+      <div class="row">
+        <main>
+            <h1>Announcements</h1>
+            {% include announcements.md %}
+          </main>
+
+          <aside>
+            <h2>Useful links</h2>
+            {% include useful-links.md %}
+          </aside>
+      </div>
     </div>
   </section>
 
