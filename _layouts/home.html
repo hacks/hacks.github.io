@@ -10,40 +10,51 @@
     <p>Thursdays 20:30&mdash;00:00 at
       <a href="https://goo.gl/maps/uQA6kwf7M8Q2" target="_blank">International Village 022</a>
     </p>
-    <img class="down-arrow align-bottom" src="/assets/img/down-arrow.png" onclick="document.querySelector('#information').scrollIntoView({ behavior: 'smooth' });"/>
+    <img class="down-arrow align-bottom" src="/assets/img/down-arrow.png" onclick="document.querySelector('#information').scrollIntoView({ behavior: 'smooth' });"
+    />
   </section>
 
   <section id="information">
-    <div class="row">
-      <main class="long-blurb">
-        <h2>One of Hacks members’ favorite pastimes is trying to describe what Hacks is. Here are some that we think are memorable:</h2>
-        <ul>
-          <li>Hacks is a place where cool people build cool stuff because it's cool</li>
-          <li>Tech tastemakers</li>
-          <li>We sit around and watch train videos</li>
-          <li>Social club for nerds</li>
-          <li>Hacks is like being swaddled inside of a maternity sweater while another person is also in that sweater. It’s warm
-            and snuggly and of course you both fit</li>
-          <li>You know, we sit around, hack the pentagon, usually with our ally, the hacker known as 4chan.</li>
-        </ul>
-      </main>
+    <div class="container">
+      <div class="row">
+        <main class="long-blurb">
+          <h2>One of Hacks members’ favorite pastimes is trying to describe what Hacks is. Here are some that we think are memorable:</h2>
+          <ul>
+            <li>Hacks is a place where cool people build cool stuff because it's cool</li>
+            <li>Tech tastemakers</li>
+            <li>We sit around and watch train videos</li>
+            <li>Social club for nerds</li>
+            <li>Hacks is like being swaddled inside of a maternity sweater while another person is also in that sweater. It’s
+              warm and snuggly and of course you both fit</li>
+            <li>You know, we sit around, hack the pentagon, usually with our ally, the hacker known as 4chan.</li>
+          </ul>
 
-      <aside id="mentors">
+          <h3>If you want to add your own description come to a hacks meeting or email
+            <a href="mailto:aronoff.j@husky.neu.edu">aronoff.j@husky.neu.edu</a>
+          </h3>
+        </main>
 
-      </aside>
+        <aside id="mentors">
+          <h2>Need help? Ask our mentors!</h2>
+          <h3>Alice Young</h3>
+          <p>I whip stylesheets into shape. Transferred to NU 2 years ago from a silly southern art school. Was on the organizing
+            team for HackBeanpot 2014.</p>
+          <h3>Trey Del Bonis</h3>
+          <p>I like Linux, Bitcoin, Rust, and Minecraft.</p>
+          <p>See all our mentors <a href="http://mentors.hacks.io/">here!</a></p>
+        </aside>
+      </div>
+
+      <a href="http://eepurl.com/EFQcH" class="align-bottom">Join our mailing list!</a>
+      <div id="social-icons">
+        {% include icon-github.html username=site.github_username %} {% include icon-twitter.html username=site.twitter_username
+        %} {% include icon-discord.html invite_link=site.discord_invite %} {% include icon-facebook.html fb_page=site.fb_page
+        %}
+      </div>
+      <img class="down-arrow" src="/assets/img/down-arrow.png" onclick="document.querySelector('#announcements').scrollIntoView({ behavior: 'smooth' });"
+      />
+
     </div>
-
-    <h3 class="mailing-list align-bottom">If you want to add your own description come to a hacks meeting or email
-      <a href="mailto:aronoff.j@husky.neu.edu">aronoff.j@husky.neu.edu</a>
-    </h3>
-    <a href="http://eepurl.com/EFQcH">Join our mailing list!</a>
-    <div id="social-icons">
-      {% include icon-github.html username=site.github_username %}
-      {% include icon-twitter.html username=site.twitter_username %}
-      {% include icon-discord.html invite_link=site.discord_invite %}
-      {% include icon-facebook.html fb_page=site.fb_page %}
-    </div>
-    <img class="down-arrow" src="/assets/img/down-arrow.png" onclick="document.querySelector('#announcements').scrollIntoView({ behavior: 'smooth' });"/>
   </section>
 
   <section id="announcements">

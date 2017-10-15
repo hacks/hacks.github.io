@@ -69,10 +69,6 @@ ul {
     img {
         margin-top: auto;
     }
-
-    mailing-list {
-        display:inline;
-    }
 }
 
 .align-bottom {
@@ -94,12 +90,26 @@ ul {
 .row {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
 #information {
     @extend .full-page;
-    flex-direction: column;
     background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        padding: 32px 32px 0 32px;
+        width:100%;
+        .long-blurb {
+            width: 50vw;
+        }
+    }
+
+    #mentors {
+        width: 25vw;
+    }
 }
 
 #announcements {
