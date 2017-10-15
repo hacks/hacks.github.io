@@ -99,10 +99,27 @@ ul {
     @extend .full-page;
     background: radial-gradient(ellipse at center, #1B2735 0%, #090A0F 100%);
 
-
-    #mentors {
-        width: 25vw;
+    @include respond-to(handhelds) {
+        .row {
+            flex-direction: column;
+        }
+        height: 100%;
     }
+    @include respond-to(medium-screens) {
+        .row {
+            flex-direction: column;
+        }
+        height: 100%;
+    }
+    @include respond-to(wide-screens) {
+        .long-blurb {
+            width: 50vw;
+        }
+        #mentors {
+            width: 25vw;
+        }
+    }
+
 }
 
 #announcements {
@@ -115,9 +132,6 @@ ul {
     flex-direction: column;
     padding: 32px 32px 0 32px;
     width:100%;
-    .long-blurb {
-        width: 50vw;
-    }
 }
 
 #social-icons {
