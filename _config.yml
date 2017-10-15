@@ -41,3 +41,4 @@ exclude:
   - CNAME
   - cibuild
   - old
+  - vendor
