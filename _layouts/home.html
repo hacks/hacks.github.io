@@ -4,6 +4,7 @@
 
 <body>
   {% include github-corner.html repo=site.github_repo %}
+
   <section id="introduction">
     <img src="/assets/img/hacktopus-web.png" id="hacktopus" alt="Hacktopus Logo">
     <h1>If you like making, breaking, hacking, designing, building, and other creative-type things, you should hang with us.</h1>
@@ -58,7 +59,10 @@
   </section>
 
   <section id="announcements">
-
+    <div class="container">
+      <h2>Announcements</h2>
+      {% include_relative announcements.md %}
+    </div>
   </section>
 
   <script src="/assets/smoothscroll.min.js"></script>
