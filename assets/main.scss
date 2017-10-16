@@ -1,6 +1,5 @@
 ---
 ---
-// vim: ai:ts=4:sw=4:et
 @import "normalize";
 @import "github-corner";
 
@@ -23,12 +22,6 @@
         font-family: $header-font-family;
         color: $font-color;
     }
-}
-
-h1 {
-    @include respond-to(handhelds) { font-size: 16pt; }
-    @include respond-to(medium-screens) { font-size: 16pt; }
-    @include respond-to(wide-screens) { font-size: 24pt; }
 }
 
 p, a, ul, li{
