@@ -37,11 +37,7 @@ h1 > a {
   color: white;
 }
 
-h1 > a:hover {
-  background: none;
-  color: #ddd;
-}
-
+h1 > a:hover,
 h1 > a:focus {
   background: none;
   color: #ddd;
@@ -58,11 +54,7 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  background: #84C2FF;
-  color: #FFF;
-}
-
+a:hover,
 a:focus {
   background: #84C2FF;
   color: #FFF;
