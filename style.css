@@ -41,6 +41,11 @@ h1 > a:hover {
   color: #ddd;
 }
 
+h1 > a:focus {
+  background: none;
+  color: #ddd;
+}
+
 p, ul {
   font-weight: 300;
 }
@@ -56,19 +61,24 @@ a:hover {
   color: #FFF;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+a:focus {
+  background: #84C2FF;
+  color: #FFF;
 }
 
-li { 
-    padding-left: 16px; 
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding-left: 16px;
 }
 
 li:before {
-    content: "*";
-    padding-right: 8px;
+  content: "*";
+  padding-right: 8px;
 }
 
 footer {
