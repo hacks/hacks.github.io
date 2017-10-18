@@ -7,7 +7,7 @@ body {
   font-size: 1.6em;
   line-height: 155%;
   color: #FFF;
-  font-family: "Proxima Nova", Helvetica, sans-serif;
+  font-family: "GlacialIndifferenceRegular", Helvetica, sans-serif;
 }
 
 #main {
@@ -28,7 +28,8 @@ h1 {
   display: inline;
   padding: 0 0.1em;
   background: #F2543D;
-  font-weight: 800;
+  font-family: "GlacialIndifferenceBold", Helvetica, sans-serif;
+  font-weight: bold;
 }
 
 /*// specifically just the page title...*/
@@ -36,13 +37,15 @@ h1 > a {
   color: white;
 }
 
-h1 > a:hover {
+h1 > a:hover,
+h1 > a:focus {
   background: none;
   color: #ddd;
 }
 
-p, ul {
-  font-weight: 300;
+h3 {
+  font-family: "GlacialIndifferenceBold", Helvetica, sans-serif;
+  font-weight: bold;
 }
 
 a {
@@ -51,24 +54,25 @@ a {
   text-decoration: none;
 }
 
-a:hover {
+a:hover,
+a:focus {
   background: #84C2FF;
   color: #FFF;
 }
 
 ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-li { 
-    padding-left: 16px; 
+li {
+  padding-left: 16px;
 }
 
 li:before {
-    content: "*";
-    padding-right: 8px;
+  content: "*";
+  padding-right: 8px;
 }
 
 footer {
