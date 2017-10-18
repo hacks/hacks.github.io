@@ -57,8 +57,18 @@ a:hover {
 }
 
 ul {
-  list-style-type: none;
-  padding: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li { 
+    padding-left: 16px; 
+}
+
+li:before {
+    content: "*";
+    padding-right: 8px;
 }
 
 footer {
