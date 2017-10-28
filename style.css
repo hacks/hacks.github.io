@@ -60,18 +60,16 @@ a:focus {
   color: #FFF;
 }
 
-ul {
+ul li {
   list-style: none;
   padding: 0;
   margin: 0;
+  list-style-type: disc;
+  color: red;
 }
 
-li {
-  padding-left: 16px;
-}
 
 li:before {
-  content: "*";
   padding-right: 8px;
 }
 
