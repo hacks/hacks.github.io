@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: " en " }}">
+{% include head.html %}
+
+<body>
+  {% include github-corner.html repo=site.github_repo %}
+  <a id="quick-jump" onclick="document.querySelector('#announcements').scrollIntoView({ behavior: 'smooth' });">Announcements and useful links</a>
+  <section id="introduction">
+    <img src="/assets/img/hacktopus-web.png" id="hacktopus" alt="Hacktopus Logo">
+    <h1>If you like making, breaking, hacking, designing, building, and other creative-type things, you should hang with us.</h1>
+    <p>Thursdays 20:30&mdash;00:00 at
+      <a href="https://goo.gl/maps/UTf6rc2RLaT2" target="_blank">Ell Hall 411</a>
+    </p>
+    <img class="down-arrow align-bottom" src="/assets/img/down-arrow.png" onclick="document.querySelector('#information').scrollIntoView({ behavior: 'smooth' });" alt="Down Arrow">
+  </section>
+
+  <section id="information">
+    <div class="container">
+      <div class="row">
+        <main class="long-blurb">
+          {% include testimonies.html %}
+        </main>
+
+        <aside id="mentors">
+          <h2>Need help? Ask our mentors!</h2>
+          {% capture mentors %}
+            {% include mentors.md %}
+          {% endcapture %}
+          {% comment %}
+            This whole capture ordeal is because we are including a markdown file inside html.
+          {% endcomment %}
+          {{ mentors | markdownify }}
+          <h3>Want a full list? Click <a href="http://mentors.hacks.io/">here</a>!</h3>
+        </aside>
+      </div>
+
+      <a href="http://eepurl.com/EFQcH" class="align-bottom">Join our mailing list!</a>
+      <div id="social-icons">
+        {% include icon-github.html username=site.github_username %}
+        {% include icon-twitter.html username=site.twitter_username %}
+        {% include icon-discord.html invite_link=site.discord_invite %}
+        {% include icon-facebook.html fb_page=site.fb_page %}
+      </div>
+      <img class="down-arrow" src="/assets/img/down-arrow.png" onclick="document.querySelector('#announcements').scrollIntoView({ behavior: 'smooth' });" alt="Down Arrow">
+
+    </div>
+  </section>
+
+  <section id="announcements">
+    <div class="container">
+      <div class="row">
+        <main>
+            <h1>Announcements</h1>
+            {% include announcements.md %}
+          </main>
+
+          <aside>
+            <h2>Useful links</h2>
+            {% capture links %}
+              {% include useful-links.md %}
+            {% endcapture %}
+            {{links | markdownify}}
+          </aside>
+      </div>
+    </div>
+  </section>
+
+  <script>window.__forceSmoothScrollPolyfill__ = true;</script>
+  <script src="/assets/smoothscroll.min.js"></script>
+</body>
+
+</html>
