@@ -7,13 +7,9 @@ The website for NUHacks, a Northeastern University student organization for hack
 Hosted at: http://hacks.io
 
 ## Adding new announcments
-Create a new `.md` file that's descriptive of your announcement in `_announcements/`. The first 2 lines **must** be the following:
-```yml
----
----
-```
+Create a new `.md` file that's descriptive of your announcement in `_announcements/`.
 
-Then, the rest should be your announcement, in Markdown. If you don't know Markdown, it's super easy to learn! Here's a [link][md-link] to get you started.
+If you don't know Markdown, it's super easy to learn! Here's a [link][md-link] to get you started.
 
 ## Adding new mentors
 Add the following to `mentors.yml`:
