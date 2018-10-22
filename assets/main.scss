@@ -58,10 +58,23 @@ ul {
     @include respond-to(medium-screens) { display: none; }
 }
 
+.background-segment{
+    background: radial-gradient(ellipse at center, #1B2735 0%, #090A0F 100%);
+}
+
 
 .full-page {
+    @extend .background-segment;
+    display: flex; 
     height: 100vh;
-    display: flex;
+
+}
+
+.single-page {
+    @extend .background-segment;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
 }
 
 
@@ -92,7 +105,6 @@ ul {
 
 #introduction {
     @extend .full-page;
-    background: radial-gradient(ellipse at top, #1B2735 0%, #090A0F 100%);
     align-items: center;
     flex-direction: column;
     text-align: center;
@@ -115,7 +127,6 @@ ul {
 
 #information {
     @extend .full-page;
-    background: radial-gradient(ellipse at center, #1B2735 0%, #090A0F 100%);
 
     @include respond-to(handhelds) {
         .row {
@@ -162,7 +173,6 @@ ul {
 
 #announcements {
     @extend .full-page;
-    background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
 
 
     @include respond-to(handhelds) {
@@ -217,4 +227,24 @@ ul {
     @include respond-to(wide-screens) { width: 30vw; }
     height: auto;
     margin-top: 50px;
+}
+
+.single-page img#hacktopus {
+
+    @include respond-to(handhelds) {
+        width: 30vw;
+        margin-left: auto;
+        margin-right: auto;
+        display:block;
+    }
+    @include respond-to(medium-screens){
+        width: 100px;
+    }
+    @include respond-to(wide-screens){
+        width: 100px;
+    }
+
+    height: auto;
+    margin-top: 0;
+
 }
