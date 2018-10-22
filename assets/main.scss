@@ -60,13 +60,13 @@ ul {
 
 .background-segment{
     background: radial-gradient(ellipse at center, #1B2735 0%, #090A0F 100%);
+    min-height: 100vh;
 }
 
 
 .full-page {
     @extend .background-segment;
     display: flex; 
-    height: 100vh;
 
 }
 
@@ -74,7 +74,6 @@ ul {
     @extend .background-segment;
     margin: 0;
     padding: 20px;
-    min-height: 100vh;
 }
 
 
@@ -161,10 +160,11 @@ ul {
         }
     }
     #social-icons {
+        padding: 8px;
+        
         a { text-decoration: none; }
 
         svg {
-            margin-top: 8px;
             width: $social-icon-size;
             height: $social-icon-size;
             padding: 0 4px;
