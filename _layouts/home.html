@@ -1,8 +1,6 @@
-<!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: " en " }}">
-{% include head.html %}
-
-<body>
+---
+layout: base
+---
   {% include github-corner.html repo=site.github_repo %}
   <a id="quick-jump" onclick="document.querySelector('#announcements').scrollIntoView({ behavior: 'smooth' });">Announcements and useful links</a>
   <section id="introduction">
@@ -14,7 +12,7 @@
     <img class="down-arrow align-bottom" src="/assets/img/down-arrow.png" onclick="document.querySelector('#information').scrollIntoView({ behavior: 'smooth' });" alt="Down Arrow">
   </section>
 
-  <section id="information">
+  <section id="information" class>
     <div class="container">
       <div class="row">
         <main class="long-blurb">
@@ -67,6 +65,4 @@
 
   <script>window.__forceSmoothScrollPolyfill__ = true;</script>
   <script src="/assets/smoothscroll.min.js"></script>
-</body>
 
-</html>
