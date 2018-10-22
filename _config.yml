@@ -2,7 +2,7 @@
 # in the templates via {{ site.myvariable }}.
 
 title: NU Hacks
-email:
+email: nuhacksboard@gmail.com
 description: The website for NUHacks, a Northeastern University student organization for hackers and makers.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://hacks.io"
