@@ -2,6 +2,9 @@
 layout: base
 ---
   {% include github-corner.html repo=site.github_repo %}
+  {% assign announcements = site.announcements | sort: 'date' %}
+  {% assign recent_announce = announcements | reverse | first %}
+
   <a id="quick-jump" onclick="document.querySelector('#announcements').scrollIntoView({ behavior: 'smooth' });">Announcements and useful links</a>
   <section id="introduction">
     <img src="/assets/img/hacktopus-web.png" id="hacktopus" alt="Hacktopus Logo">
@@ -10,8 +13,10 @@ layout: base
       <a href="https://goo.gl/maps/UTf6rc2RLaT2" target="_blank">Ell Hall 411</a>
     </p>
     <p>Read our <a href="/conduct">Code of Conduct</a></p>
+    <h3>{{ recent_announce.title }} - {{ recent_announce.summary }} <a class="link" onclick="document.querySelector('#announcements').scrollIntoView({ behavior: 'smooth' });">Read more >></a></h3>
     <img class="down-arrow align-bottom" src="/assets/img/down-arrow.png" onclick="document.querySelector('#information').scrollIntoView({ behavior: 'smooth' });" alt="Down Arrow">
   </section>
+
 
   <section id="information" class>
     <div class="container">
