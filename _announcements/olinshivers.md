@@ -1,6 +1,6 @@
 ---
 title: Olin Shivers
-summary: Join us for a talk on November 29 in 107 Robinson Hall
+summary: Join us for a talk on November 29 in Robinson Hall
 date: 2018-11-19
 ---
 
