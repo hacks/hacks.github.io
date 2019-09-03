@@ -3,7 +3,11 @@ NU Hacks
 
 The website for NUHacks, a Northeastern University student organization for hackers and makers.
 
-Hosted at: http://hacks.io
+## Local Server
+
+```bash
+docker run --rm -p 4000:4000 --name nuhacks --volume="$PWD:/srv/jekyll" jekyll/jekyll jekyll serve
+```
 
 ## Adding new announcments
 Create a new `.md` file that's descriptive of your announcement in `_announcements/`.

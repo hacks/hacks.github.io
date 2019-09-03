@@ -1,4 +1,5 @@
 .DS_Store
 run_server.sh
 .sass-cache/*
-_site/*
+_site/
+.idea/
