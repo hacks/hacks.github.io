@@ -6,7 +6,10 @@ The website for NUHacks, a Northeastern University student organization for hack
 ## Local Server
 
 ```bash
-docker run --rm -p 4000:4000 --name nuhacks --volume="$PWD:/srv/jekyll" jekyll/jekyll jekyll serve
+# 1. build image
+docker build -t nuhacks $PWD
+# 2. start container for the first time (use `-it` instead of `-p` for process to ocupy terminal)
+docker run --rm -it -p 4000:4000 --name nuhacks -v $PWD:/srv/jekyll nuhacks
 ```
 
 ## Adding new announcments
