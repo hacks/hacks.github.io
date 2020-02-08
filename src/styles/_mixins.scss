@@ -1,0 +1,46 @@
+@mixin animation-fast($keyframe) {
+  position: relative;
+  animation: $keyframe 1s ease-in-out;
+}
+
+@mixin animation-medium($keyframe) {
+  position: relative;
+  animation: $keyframe 3s ease-in-out;
+}
+
+@mixin animation-slide-top($start: -30px, $end: 0px) {
+  @keyframes slidein {
+    from {
+      top: $start;
+      opacity: 0;
+    }
+    to {
+      top: $end;
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideout {
+    from {
+      top: $end;
+      opacity: 1;
+    }
+    to {
+      top: $start;
+      opacity: 0;
+    }
+  }
+}
+
+@mixin animation-slide-bottom($start: 0px, $end: 30px) {
+  @keyframes slidein {
+    from {
+      bottom: $start;
+      opacity: 0;
+    }
+    to {
+      bottom: $end;
+      opacity: 1;
+    }
+  }
+}

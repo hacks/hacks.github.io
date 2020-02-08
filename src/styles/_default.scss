@@ -1,0 +1,32 @@
+.hacks {
+  &-small-caps {
+    font-size: $hacks-text;
+    font-weight: $hacks-small-caps-weight;
+    font-variant: small-caps;
+    text-transform: lowercase;
+    margin: unset;
+  }
+
+  &-row {
+    display: flex;
+    flex-flow: row wrap;
+  }
+}
+
+h1 {
+  font-size: $hacks-h1;
+  margin: unset;
+}
+h2 {
+  font-size: $hacks-h2;
+  font-weight: normal;
+}
+
+h3 {
+  margin: unset;
+}
+
+p {
+  font-size: $hacks-text;
+  margin: unset;
+}
