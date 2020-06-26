@@ -60,7 +60,7 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     # only run deploy if trigger is source branch
-    if: github.ref == format('refs/heads/{0}', env.source_branch )
+    if: github.ref == format('refs/heads/{0}', source_branch )
     steps:
       - name: Get artifcats from build
         uses: actions/download-artifact@v2
