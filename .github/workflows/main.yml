@@ -1,0 +1,75 @@
+# Github can only use master branch as the source for user/organization pages.
+# https://help.github.com/en/github/working-with-github-pages/about-github-pages#user-and-organization-pages-sites
+# What a dumb limitation (unlike Gitlab)
+# This workflow does `yarn build` on the 'vue' branch then pushes the `dist' folder to 'amster' branch
+# (btw Github actions was also stolen from Gitlab)
+# (btw Github is not open source unlike Gitlab, which is ironic)
+# (btw Github was bought out by Microsoft, unlike Gitlab)
+
+env:
+  source_branch: 'vue'
+
+name: CI
+
+# specify workflow to run when pushed to 'vue' branch
+# or pull request targeting 'vue' branch
+on:
+  push:
+    branches:
+      - ${{ source_branch }}
+  pull_request:
+    branches:
+      - ${{ source_branch }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install node.js (and yarn, I think)
+      uses: actions/setup-node@v2-beta
+      with:
+        node-version: '12.x'
+    # https://github.com/actions/cache/blob/master/examples.md#node---yarn
+    - name: Find out name of yarn cache path
+      id: yarn-cache-dir-path
+      run: echo "::set-output name=dir::$(yarn cache dir)"
+    - name: Cache yarn stuff
+      uses: actions/cache@v2
+      id: yarn-cache
+      with:
+        path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+        key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-yarn-
+
+    # actual stuff starts here
+    - name: Install dependencies using yarn
+      run: yarn install
+    - name: Build project using yarn
+      run: yarn build
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: dist
+        path: dist
+
+  deploy:
+    # build before deploy
+    needs: build
+    runs-on: ubuntu-latest
+    # only run deploy if trigger is source branch
+    if: github.ref == ${{ format('refs/heads/{0}', env.source_branch ) }}
+    steps:
+      - name: Get artifcats from build
+        uses: actions/download-artifact@v2
+        with:
+          name: dist
+      - name: Publish to Github pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: master
+          publish_dir: ./dist
+          cname: nuhacks.io
+          enable_jekyll: false
