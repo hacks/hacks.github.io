@@ -28,17 +28,17 @@
         <span class="hacks-homepage__join hacks-small-caps">find us on</span>
         <div class="hacks-homepage__row hacks-row">
           <hacks-button link="https://github.com/hacks">
-            <img class="hacks-homepage__item" src="../assets/GitHub-Mark-64px.png" />
+            <img src="../assets/GitHub-Mark-64px.png" />
             <h3>GitHub</h3>
           </hacks-button>
 
           <hacks-button link="https://facebook.com/groups/nuhacks">
-            <img class="hacks-homepage__item" src="../assets/facebook.svg" />
+            <img src="../assets/facebook.svg" />
             <h3>Facebook</h3>
           </hacks-button>
 
           <hacks-button link="https://twitter.com/NUHacks">
-            <img class="hacks-homepage__item" src="../assets/twitter.png" />
+            <img src="../assets/twitter.png" />
             <h3>Twitter</h3>
           </hacks-button>
         </div>
@@ -50,13 +50,14 @@
           <hacks-button
             link="https://nuhacks.us4.list-manage.com/subscribe?u=cbcce83bcf3543d25bd103865&id=6c0da9d34e"
           >
-            <img src="../assets/mail.svg" width="30px" />
+            <img src="../assets/mail.svg"/>
             <h3>Mailing List</h3>
           </hacks-button>
           <hacks-button
             link="https://join.slack.com/t/nuhacks/shared_invite/zt-fgvmdpo1-KzxoPn2ematExVMDKEK1zQ"
           >
-            <img src="../assets/Slack_Monochrome_Black.svg" width="100px" />
+            <img src="../assets/slack-black.svg">
+            <h3>Slack</h3>
           </hacks-button>
         </div>
       </div>
@@ -127,14 +128,9 @@ export default {
   &__row {
     margin-bottom: 1.5em;
 
-    :nth-child(1) {
-      margin-left: unset;
+    img {
+      height: 24px;
     }
-  }
-
-  &__item {
-    width: 30px;
-    height: 30px;
   }
 }
 </style>
