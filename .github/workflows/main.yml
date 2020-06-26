@@ -13,13 +13,13 @@ name: pages
 
 # specify workflow to run when pushed to 'vue' branch
 # or pull request targeting 'vue' branch
-on:
-  push:
-    branches:
-      - ${{ env.source_branch }}
-  pull_request:
-    branches:
-      - ${{ env.source_branch }}
+#on:
+#  push:
+#    branches:
+#      - ${{ env.source_branch }}
+#  pull_request:
+#    branches:
+#      - ${{ env.source_branch }}
 
 jobs:
   build:
