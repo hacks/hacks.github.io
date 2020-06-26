@@ -1,24 +1,25 @@
-# hacks
+# Hacks
 
-## Project setup
+![pages](https://github.com/hacks/hacks.github.io/workflows/pages/badge.svg)
+
+Hacks is a student club at Northeastern University's Khoury College of Computer Sciences.
+
+## Setup
+
 ```
-yarn install
+git clone https://github.com/hacks/hacks.github.io.git && cd hacks.github.io && yarn install
 ```
 
-### Compiles and hot-reloads for development
+### Hot-reload for Local Development
+
 ```
 yarn serve
 ```
 
-### Compiles and minifies for production
+### Minimized Production Build
+
+Default output folder is `dest`.
+
 ```
 yarn build
 ```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
