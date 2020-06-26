@@ -1,23 +1,23 @@
-export default [
+const MEMBERS = [
   {
     name: 'Jennings Zhang',
-    school: 'CCIS + COS',
+    school: 'KCCS + COS',
     year: '2022',
     hasImage: true,
     links: {
-      gitHub: 'jennydaman',
+      github: 'jennydaman',
       website: 'https://jennydaman.gitlab.io/',
       email: 'jz@nuhacks.io',
     },
-    ccs: 'jenni',
     interests: [
-      'Biomedicine',
+      'Computational Medicine',
+      'Human gut microbiome',
       'Neuroinformatics',
       'Education (fundies bad)',
       'Cybersecurity',
       '{{buzzword[8]}}',
-      'Philosophy',
-      'Smash Bros Ultimate'
+      'Philosophy and Debate',
+      'Chinese tea'
     ]
   },
   {
@@ -26,11 +26,10 @@ export default [
     year: '2021',
     hasImage: true,
     links: {
-      gitHub: 'NEUDitao',
+      github: 'NEUDitao',
       website: 'https://eddyli.dev/',
       email: 'li.edwa@northeastern.edu',
     },
-    ccs: 'ditao1',
     interests: [
       'anything, literally anything.',
       'I love musicals',
@@ -43,11 +42,10 @@ export default [
     year: '2023',
     hasImage: true,
     links: {
-      gitHub: '54skyxenon',
+      github: '54skyxenon',
       website: 'https://brandonliang.com/',
       email: 'liang.bra@northeastern.edu',
     },
-    ccs: 'bwliang2001',
     interests: [
       'Anime',
       'Hackathons',
@@ -61,11 +59,10 @@ export default [
     year: '2021',
     hasImage: true,
     links: {
-      gitHub: 'dmelcer9',
+      github: 'dmelcer9',
       website: 'https://brandonliang.com/',
       email: 'melcer.d@northeastern.edu',
     },
-    ccs: 'dmelcer9',
     interests: [
       'Hackathons',
       'Robotics',
@@ -74,3 +71,5 @@ export default [
     ]
   }
 ];
+
+export default MEMBERS;

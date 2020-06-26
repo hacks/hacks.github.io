@@ -7,7 +7,7 @@
           : require('../assets/logo.svg')
       "
     >
-      <p>
+      <p style="margin-top: 0.6em;">
         <strong>{{ person.name }}</strong>
       </p>
       <p>{{ person.school }}, {{ person.year }}</p>
