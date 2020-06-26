@@ -1,11 +1,8 @@
 <template>
   <div class="hacks-button">
-    <a class="hacks-button__row" v-if="link" :href="link" target="_blank">
+    <a class="hacks-button__row" :href="link" target="_blank">
       <slot />
     </a>
-    <div class="hacks-button__row" v-else>
-      <slot />
-    </div>
   </div>
 </template>
 
@@ -41,8 +38,7 @@ export default {
     flex-flow: row wrap;
     justify-content: space-around;
 
-    > img,
-    > h3 {
+    > * {
       margin: 0 5px;
     }
   }
