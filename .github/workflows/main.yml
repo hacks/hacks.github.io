@@ -1,25 +1,30 @@
 # Github can only use master branch as the source for user/organization pages.
 # https://help.github.com/en/github/working-with-github-pages/about-github-pages#user-and-organization-pages-sites
 # What a dumb limitation (unlike Gitlab)
-# This workflow does `yarn build` on the 'vue' branch then pushes the `dist' folder to 'amster' branch
+# This workflow does `yarn build` on the 'vue' branch then pushes the `dist' folder to 'master' branch
 # (btw Github actions was also stolen from Gitlab)
 # (btw Github is not open source unlike Gitlab, which is ironic)
 # (btw Github was bought out by Microsoft, unlike Gitlab)
 
+# this is useless
+# I wanted to set the default branch using workflow-level env, as the documentation describes,
+# https://help.github.com/en/actions/configuring-and-managing-workflows/using-environment-variables
+# yet Github doesn't support even this most basic feature of variable cascading! What a joke.
+# https://github.community/t/how-to-set-and-access-a-workflow-variable/17335/6 
 env:
-  source_branch: 'vue'
+  source_branch: vue
 
 name: pages
 
 # specify workflow to run when pushed to 'vue' branch
 # or pull request targeting 'vue' branch
-#on:
-#  push:
-#    branches:
-#      - ${{ env.source_branch }}
-#  pull_request:
-#    branches:
-#      - ${{ env.source_branch }}
+on:
+  push:
+    branches:
+      - 'vue'
+  pull_request:
+    branches:
+      - 'vue'
 
 jobs:
   build:
@@ -59,7 +64,7 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     # only run deploy if trigger is source branch
-    if: github.ref == format('refs/heads/{0}', env.source_branch )
+    if: github.ref == 'vue'
     steps:
       - name: Get artifcats from build
         uses: actions/download-artifact@v2
