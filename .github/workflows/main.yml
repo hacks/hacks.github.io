@@ -64,7 +64,7 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     # only run deploy if trigger is source branch
-    if: github.ref == 'vue'
+    if: github.ref == 'refs/heads/vue'
     steps:
       - name: Get artifcats from build
         uses: actions/download-artifact@v2
