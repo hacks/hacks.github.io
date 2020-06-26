@@ -16,10 +16,10 @@ name: pages
 on:
   push:
     branches:
-      - ${{ source_branch }}
+      - ${{ env.source_branch }}
   pull_request:
     branches:
-      - ${{ source_branch }}
+      - ${{ env.source_branch }}
 
 jobs:
   build:
