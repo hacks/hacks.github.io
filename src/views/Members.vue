@@ -3,17 +3,32 @@
     <div v-for="(person, index) in members" :key="index">
       <div class="hacks-members__row hacks-members__member">
         <div class="hacks-members__column">
-          <div v-for="(link, index) in person.links" :key="index">
-            <hacks-button :link="getUrl(index, link)">
-              <img class="hacks-members__icon" :src="getSrc(index)" />
-            </hacks-button>
-          </div>
-        </div>
-        <hacks-profile-card :person="person" page="members">
-          <hacks-button>
-            <h3 class="hacks-members__ccs">CCS: {{ person.ccs }}</h3>
+          <hacks-button
+            v-if="person.links.website"
+            :link="person.links.website"
+          >
+            <img :src="cursorIcon" />
           </hacks-button>
-        </hacks-profile-card>
+          <hacks-button
+            v-if="person.links.email"
+            :link="`mailto:${person.links.email}`"
+          >
+            <img :src="outlookIcon" />
+          </hacks-button>
+          <hacks-button
+            v-if="person.links.github"
+            :link="`https://github.com/${person.links.github}`"
+          >
+            <img :src="githubIcon" />
+          </hacks-button>
+          <hacks-button
+            v-if="person.links.linkedin"
+            :link="`https://linkedin.com/in/${person.links.github}`"
+          >
+            <img :src="linkedinIcon" />
+          </hacks-button>
+        </div>
+        <hacks-profile-card :person="person" page="members" />
         <div class="hacks-members__list">
           <p class="hacks-small-caps">interests</p>
           <ul>
@@ -41,48 +56,11 @@ export default {
   data() {
     return {
       members: MEMBERS,
+      githubIcon: require("../assets/GitHub-Mark-64px.png"),
+      cursorIcon: require("../assets/cursor.svg"),
+      linkedinIcon: require("../assets/linkedin.svg"),
+      outlookIcon: require("../assets/microsoft-outlook.svg"),
     };
-  },
-  methods: {
-    getUrl(key, user) {
-      let url;
-      switch (key) {
-      case "gitHub":
-        url = "https://github.com/" + user;
-        break;
-      case "email":
-        url = "mailto:" + user;
-        break;
-      case "linkedIn":
-        url = "https://linkedin.com/in/" + user;
-        break;
-      default:
-        url = user;
-        break;
-      }
-      return url;
-    },
-    getSrc(key) {
-      let source;
-      switch (key) {
-      case "website":
-        source = require("../assets/cursor.svg");
-        break;
-      case "gitHub":
-        source = require("../assets/GitHub-Mark-64px.png");
-        break;
-      case "email":
-        source = require("../assets/microsoft-outlook.svg");
-        break;
-      case "linkedIn":
-        source = require("../assets/linkedin.svg");
-        break;
-      default:
-        source = null;
-        break;
-      }
-      return source;
-    },
   },
 };
 </script>
@@ -139,7 +117,7 @@ export default {
     flex-flow: column wrap;
   }
 
-  &__icon {
+  &__column img {
     display: block;
     width: 20px;
     margin: auto 1em;
