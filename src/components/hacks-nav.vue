@@ -1,19 +1,10 @@
 <template>
   <div class="hacks-nav">
     <div class="hacks-nav__container" v-if="!isMobile">
-      <router-link
-              v-for="r in routes"
-              :key="r.path"
-              :to="r.path">
-        {{ r.name }}
-      </router-link>
+      <router-link v-for="r in routes" :key="r.path" :to="r.path">{{ r.name }}</router-link>
     </div>
 
-    <div
-      class="hacks-nav__button"
-      v-if="isMobile"
-      @click="menuOpen = !menuOpen"
-    >
+    <div class="hacks-nav__button" v-if="isMobile" @click="menuOpen = !menuOpen">
       <h2>≡</h2>
     </div>
 
@@ -46,14 +37,14 @@ import { routes } from "../router";
 export default {
   name: "hacks-nav",
   components: {
-    HacksModal,
+    HacksModal
   },
   props: {
     isMobile: {
       type: Boolean,
       required: true,
-      default: false,
-    },
+      default: false
+    }
   },
   data() {
     return {
@@ -64,8 +55,8 @@ export default {
   methods: {
     closeModal() {
       this.menuOpen = !menuOpen;
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -74,6 +65,7 @@ export default {
 
 .hacks-nav {
   font-variant: small-caps;
+  text-transform: lowercase;
   font-weight: lighter;
   width: $hacks-page-width;
   display: block;
