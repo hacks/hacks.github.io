@@ -1,6 +1,10 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
+import About from '../views/About.vue';
+import EBoard from '../views/EBoard.vue';
+import Members from '../views/Members.vue';
+import Conduct from '../views/Conduct.vue';
 
 Vue.use(VueRouter);
 
@@ -13,22 +17,22 @@ const routes = [
   {
     path: '/about',
     name: 'About',
-    component: () => import('../views/About.vue')
+    component: About
   },
   {
     path: '/eboard',
     name: 'EBoard',
-    component: () => import('../views/EBoard.vue')
+    component: EBoard
   },
   {
     path: '/members',
     name: 'Members',
-    component: () => import('../views/Members.vue')
+    component: Members
   },
   {
     path: '/conduct',
     name: 'Conduct',
-    component: () => import('../views/Conduct.vue')
+    component: Conduct
   }
 ];
 
