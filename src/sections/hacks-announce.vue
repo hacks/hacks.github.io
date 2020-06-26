@@ -72,11 +72,10 @@ export default {
       margin: unset;
       color: black;
       background: url("../assets/speech-bubble.svg") no-repeat;
-      background-size: 230px auto;
+      background-size: contain;
       width: 220px;
       height: 180px;
-      padding-left: 15px;
-      padding-top: 15px;
+      padding: 15px;
     }
   }
 }
