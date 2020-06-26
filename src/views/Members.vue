@@ -47,39 +47,39 @@ export default {
     getUrl(key, user) {
       let url;
       switch (key) {
-        case "gitHub":
-          url = "https://github.com/" + user;
-          break;
-        case "email":
-          url = "mailto:" + user;
-          break;
-        case "linkedIn":
-          url = "https://linkedin.com/in/" + user;
-          break;
-        default:
-          url = user;
-          break;
+      case "gitHub":
+        url = "https://github.com/" + user;
+        break;
+      case "email":
+        url = "mailto:" + user;
+        break;
+      case "linkedIn":
+        url = "https://linkedin.com/in/" + user;
+        break;
+      default:
+        url = user;
+        break;
       }
       return url;
     },
     getSrc(key) {
       let source;
       switch (key) {
-        case "website":
-          source = require("../assets/cursor.svg");
-          break;
-        case "gitHub":
-          source = require("../assets/GitHub-Mark-64px.png");
-          break;
-        case "email":
-          source = require("../assets/microsoft-outlook.svg");
-          break;
-        case "linkedIn":
-          source = require("../assets/linkedin.svg");
-          break;
-        default:
-          source = null;
-          break;
+      case "website":
+        source = require("../assets/cursor.svg");
+        break;
+      case "gitHub":
+        source = require("../assets/GitHub-Mark-64px.png");
+        break;
+      case "email":
+        source = require("../assets/microsoft-outlook.svg");
+        break;
+      case "linkedIn":
+        source = require("../assets/linkedin.svg");
+        break;
+      default:
+        source = null;
+        break;
       }
       return source;
     },
