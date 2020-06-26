@@ -25,8 +25,8 @@ const routes = [
     component: EBoard
   },
   {
-    path: '/members',
-    name: 'Members',
+    path: '/people',
+    name: 'People',
     component: Members
   },
   {
@@ -41,3 +41,4 @@ const router = new VueRouter({
 });
 
 export default router;
+export { routes };
