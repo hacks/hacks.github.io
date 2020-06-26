@@ -9,7 +9,7 @@
 env:
   source_branch: 'vue'
 
-name: CI
+name: pages
 
 # specify workflow to run when pushed to 'vue' branch
 # or pull request targeting 'vue' branch
