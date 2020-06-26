@@ -75,6 +75,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: master
-          publish_dir: ./dist
           cname: nuhacks.io
           enable_jekyll: false
