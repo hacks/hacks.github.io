@@ -28,19 +28,10 @@ export default {
     object-fit: cover;
     border-radius: 10%;
     filter: grayscale(100%);
+    transition: filter 1s;
 
     &:hover,
     &:focus {
-      @keyframes movein {
-        from {
-          filter: grayscale(100%);
-        }
-        to {
-          filter: grayscale(0%);
-        }
-      }
-
-      @include animation-fast(movein);
       filter: grayscale(0%);
     }
   }

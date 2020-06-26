@@ -35,6 +35,7 @@ export default {
   margin: 0.5em;
   height: fit-content;
   padding: 15px;
+  transition: background-color 1s;
 
   &__row {
     display: flex;
@@ -54,16 +55,6 @@ export default {
 
   &:hover,
   &:focus {
-    @keyframes colorin {
-      from {
-        background-color: $hacks-nav-inactive-color;
-      }
-      to {
-        background-color: $hacks-nav-active-color;
-      }
-    }
-
-    @include animation-fast(colorin);
     background-color: $hacks-nav-active-color;
   }
 }
