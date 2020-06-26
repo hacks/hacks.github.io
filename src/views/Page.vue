@@ -2,7 +2,7 @@
   <section class="hacks-page">
     <github-corner :is-mobile="isMobile" :link="link" />
     <hacks-nav :is-mobile="isMobile" />
-    <router-view />
+    <router-view :is-mobile="isMobile" />
   </section>
 </template>
 
@@ -23,7 +23,7 @@ export default {
     };
   },
   beforeMount() {
-    const breakpoint = window.matchMedia("( max-width: 981px )");
+    const breakpoint = window.matchMedia("( max-width: 710px )");
     this.addQuery(breakpoint, mq => {
       this.isMobile = mq.matches;
     });
