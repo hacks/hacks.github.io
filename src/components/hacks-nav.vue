@@ -1,11 +1,12 @@
 <template>
   <div class="hacks-nav">
     <div class="hacks-nav__container" v-if="!isMobile">
-      <router-link to="/">home</router-link>
-      <router-link to="/about">about</router-link>
-      <router-link to="/eboard">ebo</router-link>
-      <router-link to="/members">members</router-link>
-      <router-link to="/conduct">code</router-link>
+      <router-link
+              v-for="r in routes"
+              :key="r.path"
+              :to="r.path">
+        {{ r.name }}
+      </router-link>
     </div>
 
     <div
@@ -40,6 +41,7 @@
 
 <script>
 import HacksModal from "./hacks-modal";
+import { routes } from "../router";
 
 export default {
   name: "hacks-nav",
@@ -56,6 +58,7 @@ export default {
   data() {
     return {
       menuOpen: false,
+      routes: routes
     };
   },
   methods: {
