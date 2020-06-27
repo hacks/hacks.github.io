@@ -54,7 +54,7 @@ export default {
   },
   methods: {
     closeModal() {
-      this.menuOpen = !menuOpen;
+      this.menuOpen = !this.menuOpen;
     }
   }
 };
@@ -71,13 +71,13 @@ export default {
   display: block;
   margin: auto;
 
-  @media (max-width: $hacks-page-width) {
-    display: unset;
-  }
-
   &__button {
     line-height: 48px;
     cursor: pointer;
+    display: block;
+    width: 100vw;
+    top: 0;
+    right: 0;
 
     h2 {
       margin: unset;
@@ -100,12 +100,12 @@ export default {
     text-decoration: none;
     font-weight: 900;
     size: 14px !important;
-    color: $hacks-nav-inactive-color;
+    color: $hacks-nav-inactive-color !important;
     font-size: $hacks-h2;
-    padding: 0.5em 1em;
+    padding: 0.5em;
 
     &.router-link-exact-active {
-      color: $hacks-nav-active-color;
+      color: $hacks-nav-active-color !important;
     }
 
     &:hover,
@@ -131,7 +131,7 @@ export default {
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
-    max-width: fit-content;
+    margin: unset;
     margin-top: 1em;
 
     :nth-child(1) {

@@ -30,3 +30,16 @@ p {
   font-size: $hacks-text;
   margin: unset;
 }
+
+a,
+a:visited {
+  color: $hacks-a;
+}
+
+a:hover {
+  color: $hacks-a-hover;
+}
+
+a:active {
+  color: $hacks-a-active;
+}
