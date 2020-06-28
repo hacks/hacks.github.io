@@ -17,7 +17,7 @@
         </em>
       </p>
 
-      <div class="hacks-homepage__email">
+      <div>
         <span class="hacks-small-caps">Questions?</span>
         <p>Email us at eboard@nuhacks.io</p>
       </div>
@@ -50,13 +50,13 @@
           <hacks-button
             link="https://nuhacks.us4.list-manage.com/subscribe?u=cbcce83bcf3543d25bd103865&id=6c0da9d34e"
           >
-            <img src="../assets/mail.svg"/>
+            <img src="../assets/mail.svg" />
             <h3>Mailing List</h3>
           </hacks-button>
           <hacks-button
             link="https://join.slack.com/t/nuhacks/shared_invite/zt-fgvmdpo1-KzxoPn2ematExVMDKEK1zQ"
           >
-            <img src="../assets/slack-black.svg">
+            <img src="../assets/slack-black.svg" />
             <h3>Slack</h3>
           </hacks-button>
         </div>
@@ -73,8 +73,8 @@ export default {
   name: "hacks-homepage",
   components: {
     HacksButton,
-    HacksAnnounce
-  }
+    HacksAnnounce,
+  },
 };
 </script>
 
@@ -88,27 +88,19 @@ export default {
   }
 
   &__slogan {
-    width: 500px;
+    width: 600px;
     line-height: $hacks-text-spacing;
-
-    @media (max-width: 500px) {
-      width: 100%;
-    }
-  }
-
-  &__email {
-    padding-left: 3em;
+    margin-right: 1em;
+    margin-bottom: 1em;
   }
 
   &__join {
     font-weight: $hacks-small-caps-weight;
-    font-size: 36px !important;
     padding-left: 0.3em;
   }
 
   &__title {
-    text-shadow: 2px 0px rgba($color: red, $alpha: 0.4),
-      -2px 0px rgba($color: cyan, $alpha: 0.4);
+    text-shadow: $hacks-title-three-dee;
     color: rgba($color: white, $alpha: 0.7);
   }
 
