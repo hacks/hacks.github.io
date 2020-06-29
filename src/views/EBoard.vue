@@ -145,7 +145,6 @@ export default {
 
   &__position {
     opacity: 0.7;
-    width: 10em;
     word-wrap: break-word;
   }
 

@@ -90,14 +90,6 @@ export default {
     flex-flow: row wrap;
   }
 
-  &__ccs {
-    display: block;
-    margin: auto;
-    color: $hacks-background-color;
-    font-size: 18px;
-    text-transform: uppercase;
-  }
-
   &__member {
     margin: 1em;
     margin-left: unset;
@@ -121,7 +113,6 @@ export default {
           content: ">";
           padding-right: 1em;
           vertical-align: top;
-          font-size: 18px;
         }
       }
     }
