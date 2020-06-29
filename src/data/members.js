@@ -69,6 +69,25 @@ const MEMBERS = [
       'TV shows',
       "basically anything, though I don't really keep up with celebrities and such"
     ]
+  },
+  {
+    name: 'Natalie Hsu',
+    school: 'KCCS + CAMD',
+    year: '2022 + 1',
+    hasImage: true,
+    links: {
+      github: 'indefinities',
+      website: 'https://indefinities.github.io/',
+      email: 'hsu.na@northeastern.edu',
+    },
+    interests: [
+      'boba, bubble tea, any kind of tea',
+      '(ask me about where to get bubble tea in Boston)',
+      'silly shibes',
+      'Twitter and Instagram art',
+      '日本， アニメ',
+      'Teamfight Tactics'
+    ]
   }
 ];
 
