@@ -1,29 +1,25 @@
 <template>
   <div class="hacks-nav">
     <div class="hacks-nav__container" v-if="!isMobile">
-      <router-link v-for="r in routes" :key="r.path" :to="r.path">{{ r.name }}</router-link>
+      <router-link v-for="r in routes" :key="r.path" :to="r.path">{{
+        r.name
+      }}</router-link>
     </div>
 
-    <div class="hacks-nav__button" v-if="isMobile" @click="menuOpen = !menuOpen">
+    <div
+      class="hacks-nav__button"
+      v-if="isMobile"
+      @click="menuOpen = !menuOpen"
+    >
       <h2>≡</h2>
     </div>
 
     <hacks-modal v-if="menuOpen" @close-modal="closeModal()" dark-mode>
       <ul class="hacks-nav__mobile-menu">
-        <li @click="menuOpen = !menuOpen">
-          <router-link to="/">home</router-link>
-        </li>
-        <li @click="menuOpen = !menuOpen">
-          <router-link to="/about">about</router-link>
-        </li>
-        <li @click="menuOpen = !menuOpen">
-          <router-link to="/eboard">ebo</router-link>
-        </li>
-        <li @click="menuOpen = !menuOpen">
-          <router-link to="/members">members</router-link>
-        </li>
-        <li @click="menuOpen = !menuOpen">
-          <router-link to="/conduct">code</router-link>
+        <li v-for="r in routes" :key="r.path" @click="menuOpen = !menuOpen">
+          <router-link :to="r.path">
+            <span class="hacks-small-caps">{{ r.name }}</span>
+          </router-link>
         </li>
       </ul>
     </hacks-modal>
@@ -37,26 +33,26 @@ import { routes } from "../router";
 export default {
   name: "hacks-nav",
   components: {
-    HacksModal
+    HacksModal,
   },
   props: {
     isMobile: {
       type: Boolean,
       required: true,
-      default: false
-    }
+      default: false,
+    },
   },
   data() {
     return {
       menuOpen: false,
-      routes: routes
+      routes: Object.freeze(routes),
     };
   },
   methods: {
     closeModal() {
       this.menuOpen = !this.menuOpen;
-    }
-  }
+    },
+  },
 };
 </script>
 
