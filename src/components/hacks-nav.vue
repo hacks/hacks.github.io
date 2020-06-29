@@ -45,7 +45,7 @@ export default {
   data() {
     return {
       menuOpen: false,
-      routes: Object.freeze(routes),
+      routes: routes,
     };
   },
   methods: {
