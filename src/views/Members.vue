@@ -41,7 +41,6 @@
         </div>
         <hacks-profile-card :person="person" page="members" />
         <div class="hacks-members__list">
-          <p class="hacks-small-caps">interests</p>
           <ul>
             <li v-for="(interest, index) in person.interests" :key="index">{{ interest }}</li>
           </ul>
