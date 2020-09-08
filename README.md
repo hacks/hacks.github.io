@@ -1,6 +1,6 @@
 # Hacks
 
-![pages](https://github.com/hacks/hacks.github.io/workflows/pages/badge.svg)
+[![pages](https://github.com/hacks/hacks.github.io/workflows/pages/badge.svg)](https://github.com/hacks/hacks.github.io/actions?query=workflow%3Apages)
 
 Hacks is a student club at Northeastern University's Khoury College of Computer Sciences.
 

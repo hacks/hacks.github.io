@@ -1,10 +1,16 @@
 <template>
   <div class="hacks-nav">
     <div class="hacks-nav__container" v-if="!isMobile">
-      <router-link v-for="r in routes" :key="r.path" :to="r.path">{{ r.name }}</router-link>
+      <router-link v-for="r in routes" :key="r.path" :to="r.path">{{
+        r.name
+      }}</router-link>
     </div>
 
-    <div class="hacks-nav__button" v-if="isMobile" @click="menuOpen = !menuOpen">
+    <div
+      class="hacks-nav__button"
+      v-if="isMobile"
+      @click="menuOpen = !menuOpen"
+    >
       <h2>≡</h2>
     </div>
 
@@ -37,26 +43,26 @@ import { routes } from "../router";
 export default {
   name: "hacks-nav",
   components: {
-    HacksModal
+    HacksModal,
   },
   props: {
     isMobile: {
       type: Boolean,
       required: true,
-      default: false
-    }
+      default: false,
+    },
   },
   data() {
     return {
       menuOpen: false,
-      routes: routes
+      routes: routes,
     };
   },
   methods: {
     closeModal() {
       this.menuOpen = !this.menuOpen;
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -67,22 +73,23 @@ export default {
   font-variant: small-caps;
   text-transform: lowercase;
   font-weight: lighter;
-  width: $hacks-page-width;
   display: block;
   margin: auto;
+  width: fit-content;
 
   &__button {
-    line-height: 48px;
     cursor: pointer;
     display: block;
     width: 100vw;
+    line-height: 3em;
     top: 0;
     right: 0;
 
     h2 {
       margin: unset;
       text-align: right;
-      font-size: 108px !important;
+      padding-right: 0.1em;
+      font-size: $hacks-hamburger-size;
     }
   }
 
@@ -92,14 +99,17 @@ export default {
     list-style-type: none;
     display: block;
     margin: 15vh auto;
-    font-size: 72px;
+    font-size: $hacks-mobile-menu-text;
+
+    > li {
+      padding: 1em 0;
+    }
   }
 
   a {
     position: relative;
     text-decoration: none;
     font-weight: 900;
-    size: 14px !important;
     color: $hacks-nav-inactive-color !important;
     font-size: $hacks-h2;
     padding: 0.5em;
@@ -113,8 +123,7 @@ export default {
       &:not(.router-link-exact-active) {
         @keyframes focusin {
           from {
-            text-shadow: 3px 3px rgba($color: red, $alpha: 0.4),
-              -3px -3px rgba($color: cyan, $alpha: 0.4);
+            text-shadow: $hacks-three-dee;
           }
           to {
             text-shadow: unset;
@@ -130,9 +139,14 @@ export default {
   &__container {
     display: flex;
     flex-wrap: wrap;
+    width: $hacks-page-width;
     align-items: baseline;
     margin: unset;
     margin-top: 1em;
+
+    @media (max-width: $hacks-page-width) {
+      width: 80vw;
+    }
 
     :nth-child(1) {
       padding-left: unset;

@@ -1,11 +1,33 @@
 // Text
-$hacks-h1: 48px;
-$hacks-h2: 36px;
-$hacks-text: 24px;
+$hacks-h1: 3em;
+$hacks-h2: 2em;
+$hacks-text: 1.5em;
 $hacks-text-spacing: 2em;
+$hacks-small-caps-size: 2.2em;
 $hacks-small-caps-weight: 600;
+$hacks-hamburger-size: 8em;
+$hacks-mobile-menu-text: em(72px);
 
 $hacks-border: 5px dotted rgba(white, 0.5);
+$hacks-three-dee: 3px 3px
+    rgba(
+      $color: red,
+      $alpha: 0.4,
+    ),
+  -3px -3px
+    rgba(
+      $color: cyan,
+      $alpha: 0.4,
+    );
+$hacks-title-three-dee: 2px 0px
+    rgba(
+      $color: red,
+      $alpha: 0.4,
+    ),
+  -2px 0px rgba(
+      $color: cyan,
+      $alpha: 0.4,
+    );
 
 // Sizes
 $hacks-page-width: 981px;

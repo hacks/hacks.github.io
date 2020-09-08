@@ -16,9 +16,7 @@
       is. Here are some that we think are memorable:
     </p>
     <ul>
-      <li>
-        Hacks is a place where cool people build cool stuff because it's cool
-      </li>
+      <li>Hacks is a place where cool people build cool stuff because it's cool</li>
       <li>Tech tastemakers</li>
       <li>We sit around and watch train videos</li>
       <li>Social club for nerds</li>
@@ -29,14 +27,16 @@
     </ul>
     <p>
       If you want to add your own description come to a hacks meeting or email
-      <a href="mailto:eboard@nuhacks.io">eboard@nuhacks.io</a>
+      <a
+        href="mailto:eboard@nuhacks.io"
+      >eboard@nuhacks.io</a>
     </p>
   </section>
 </template>
 
 <script>
 export default {
-  name: "hacks-about",
+  name: "hacks-about"
 };
 </script>
 
@@ -66,7 +66,6 @@ export default {
 
     li:before {
       content: "⮑";
-      font-size: 18px;
       vertical-align: top;
       padding-right: 1em;
     }
