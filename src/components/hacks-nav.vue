@@ -16,20 +16,10 @@
 
     <hacks-modal v-if="menuOpen" @close-modal="closeModal()" dark-mode>
       <ul class="hacks-nav__mobile-menu">
-        <li @click="menuOpen = !menuOpen">
-          <router-link to="/">home</router-link>
-        </li>
-        <li @click="menuOpen = !menuOpen">
-          <router-link to="/about">about</router-link>
-        </li>
-        <li @click="menuOpen = !menuOpen">
-          <router-link to="/eboard">ebo</router-link>
-        </li>
-        <li @click="menuOpen = !menuOpen">
-          <router-link to="/members">members</router-link>
-        </li>
-        <li @click="menuOpen = !menuOpen">
-          <router-link to="/conduct">code</router-link>
+        <li v-for="r in routes" :key="r.path" @click="menuOpen = !menuOpen">
+          <router-link :to="r.path">
+            <span class="hacks-small-caps">{{ r.name }}</span>
+          </router-link>
         </li>
       </ul>
     </hacks-modal>

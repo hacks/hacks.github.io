@@ -88,4 +88,5 @@ const MEMBERS = [
   }
 ];
 
+Object.freeze(MEMBERS);
 export default MEMBERS;
