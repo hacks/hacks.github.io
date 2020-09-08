@@ -1,7 +1,7 @@
 const MEMBERS = [
   {
     name: 'Jennings Zhang',
-    school: 'KCCS + COS',
+    school: 'CCIS + COS',
     year: '2022',
     hasImage: true,
     links: {
@@ -11,13 +11,10 @@ const MEMBERS = [
     },
     interests: [
       'Computational Medicine',
-      'Human gut microbiome',
-      'Neuroinformatics',
-      'Education (fundies bad)',
       'Cybersecurity',
       '{{buzzword[8]}}',
-      'Philosophy and Debate',
-      'Chinese tea'
+      'Philosophy',
+      'Cooking'
     ]
   },
   {
