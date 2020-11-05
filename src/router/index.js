@@ -41,4 +41,5 @@ const router = new VueRouter({
 });
 
 export default router;
+Object.freeze(routes);
 export { routes };

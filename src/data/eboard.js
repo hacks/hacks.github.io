@@ -1,4 +1,4 @@
-export default [
+const EBOARD = [
   {
     name: 'Edward Li',
     position: 'President',
@@ -76,3 +76,6 @@ export default [
 
   }
 ];
+
+Object.freeze(EBOARD);
+export default EBOARD;
