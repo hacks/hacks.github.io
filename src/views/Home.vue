@@ -54,10 +54,10 @@
             <h3>Mailing List</h3>
           </hacks-button>
           <hacks-button
-            link="https://join.slack.com/t/nuhacks/shared_invite/zt-fgvmdpo1-KzxoPn2ematExVMDKEK1zQ"
+            link="https://discord.gg/urRKkehdEj"
           >
-            <img src="../assets/slack-black.svg" />
-            <h3>Slack</h3>
+            <img src="../assets/Discord-Logo-Black.svg" />
+            <h3>Discord</h3>
           </hacks-button>
         </div>
       </div>
