@@ -1,9 +1,7 @@
 <template>
-  <div class="hacks-button">
-    <a class="hacks-button__row" :href="link" target="_blank">
-      <slot />
-    </a>
-  </div>
+  <a class="hacks-button" :href="link" target="_blank">
+    <slot />
+  </a>
 </template>
 
 <script>
@@ -34,20 +32,16 @@ export default {
   padding: 15px;
   transition: background-color 1s;
 
-  &__row {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
 
-    > * {
-      margin: 0 5px;
-    }
+  > * {
+    margin: 0 5px;
   }
 
-  a {
-    text-decoration: none;
-    color: black;
-  }
+  text-decoration: none;
+  color: black;
 
   &:hover,
   &:focus {
