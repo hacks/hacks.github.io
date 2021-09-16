@@ -54,7 +54,7 @@
             <h3>Mailing List</h3>
           </hacks-button>
           <hacks-button
-            link="https://discord.gg/urRKkehdEj"
+            link="https://discord.gg/SbD8t7ZPfg"
           >
             <img src="../assets/Discord-Logo-Black.svg" />
             <h3>Discord</h3>
