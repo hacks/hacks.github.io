@@ -20,6 +20,7 @@ h1 {
 h2 {
   font-size: $hacks-h2;
   font-weight: normal;
+  margin: unset;
 }
 
 h3 {
@@ -29,17 +30,4 @@ h3 {
 p {
   font-size: $hacks-text;
   margin: unset;
-}
-
-a,
-a:visited {
-  color: $hacks-a;
-}
-
-a:hover {
-  color: $hacks-a-hover;
-}
-
-a:active {
-  color: $hacks-a-active;
 }

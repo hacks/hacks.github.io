@@ -27,7 +27,7 @@
     </ul>
     <p>
       If you want to add your own description come to a hacks meeting or email
-      <a
+      <a class="hacks-about__mail-link"
         href="mailto:eboard@nuhacks.io"
       >eboard@nuhacks.io</a>
     </p>
@@ -44,8 +44,13 @@ export default {
 @import "../styles/_base";
 
 .hacks-about {
-  a {
+  &__mail-link {
+    text-decoration: none;
     color: white;
+
+    a:hover, a:focus {
+      color: $hacks-nav-active-color;
+    }
   }
 
   &__title {

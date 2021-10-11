@@ -2,15 +2,15 @@
   <section class="hacks-profile-card">
     <hacks-square
       :source="
-        person.hasImage
-          ? require('../assets/members/' + person.name + '.jpg')
+        person.imgName
+          ? require('../assets/members/' + person.imgName + '.png')
           : require('../assets/logo.svg')
       "
     >
       <p style="margin-top: 0.6em;">
         <strong>{{ person.name }}</strong>
       </p>
-      <p>{{ person.school }}, {{ person.year }}</p>
+      <p v-if="person.school && person.year">{{ person.school }}, {{ person.year }}</p>
       <slot />
     </hacks-square>
   </section>
@@ -25,6 +25,9 @@ export default {
     HacksSquare,
   },
   props: {
+    /**
+     * The person's profile to be displayed within the profile card.
+     */
     person: {
       type: Object,
       required: true,
@@ -38,7 +41,7 @@ export default {
 .hacks-profile-card {
   width: 240px;
   padding-top: 1em;
-  border-radius: 10px;
+  border-radius: 5px;
   display: inline-block;
   margin: 1em;
   vertical-align: top;

@@ -34,6 +34,19 @@ export default {
   padding: 15px;
   transition: background-color 1s;
 
+  a,
+  a:visited {
+    color: $hacks-a;
+  }
+
+  a:hover {
+    color: $hacks-a-hover;
+  }
+
+  a:active {
+    color: $hacks-a-active;
+  }
+
   &__row {
     display: flex;
     flex-flow: row wrap;

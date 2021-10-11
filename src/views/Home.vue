@@ -17,9 +17,9 @@
         </em>
       </p>
 
-      <div>
+      <div class="hacks-homepage__questions">
         <span class="hacks-small-caps">Questions?</span>
-        <p>Email us at eboard@nuhacks.io</p>
+        <p>Email us at <a href="mailto:eboard@nuhacks.io">eboard@nuhacks.io</a></p>
       </div>
     </div>
 
@@ -114,6 +114,13 @@ export default {
 
     .hacks-homepage__row {
       margin: unset;
+    }
+  }
+
+  &__questions {
+    a {
+      text-decoration: none;
+      color: white;
     }
   }
 

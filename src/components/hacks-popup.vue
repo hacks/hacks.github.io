@@ -13,6 +13,9 @@
 export default {
   name: "hacks-popup",
   props: {
+    /**
+     * Indicated the direction the pop-up is displaying.
+     */
     direction: {
       type: String,
       required: true,
@@ -25,6 +28,9 @@ export default {
     };
   },
   methods: {
+    /**
+     * Displays popup based on mouse activity.
+     */
     hoverEvent(state) {
       this.showPopup = state;
     }

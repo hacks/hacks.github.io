@@ -2,7 +2,6 @@
   <div class="hacks-modal">
     <div
       class="hacks-modal__content"
-      :class="darkMode ? 'hacks-modal__dark' : 'hacks-modal__light'"
     >
       <span @click.prevent="closeModal()" class="hacks-modal__close">&times;</span>
       <slot />
@@ -13,13 +12,10 @@
 <script>
 export default {
   name: "hacks-modal",
-  props: {
-    darkMode: {
-      type: Boolean,
-      default: false
-    }
-  },
   methods: {
+    /**
+     * Emits an event to the parent component to close the modal.
+     */
     closeModal() {
       this.$emit("close-modal");
     }
@@ -59,22 +55,14 @@ export default {
     padding-top: unset;
   }
 
-  &__light {
-    background-color: $hacks-text-color;
-    color: $hacks-dark-text-color;
-  }
-
-  &__dark {
-    background-color: $hacks-background-color;
-    color: $hacks-text-color;
-  }
-
   &__content {
     margin: auto;
     width: 65vw;
     border-radius: 10px;
     padding: 1em 1em 2.5em 0;
     margin-bottom: 10vh;
+    color: black;
+    background-color: $hacks-nav-inactive-color;
 
     @media (max-width: 1000px) {
       width: 100vw;
@@ -85,18 +73,16 @@ export default {
   }
 
   &__close {
-    color: $hacks-nav-inactive-color;
+    color: $hacks-a;
     font-size: 2em;
     font-weight: bold;
     float: right;
-
-    @media (max-width: 1000px) {
-      padding-right: 1em;
-    }
+    padding-right: 10px;
 
     &:hover,
     &:focus {
-      color: $hacks-dark-text-color;
+      transition: color 1s;
+      color: $hacks-a-hover;
       text-decoration: none;
       cursor: pointer;
     }
