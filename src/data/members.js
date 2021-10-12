@@ -3,7 +3,7 @@ const MEMBERS = [
     name: 'Jennings Zhang',
     school: 'CCIS + COS',
     year: '2022',
-    hasImage: true,
+    imgName: 'jenningszhang',
     links: {
       github: 'jennydaman',
       website: 'https://jennydaman.gitlab.io/',
@@ -18,26 +18,10 @@ const MEMBERS = [
     ]
   },
   {
-    name: 'Edward Li',
-    school: 'KCCS',
-    year: '2021',
-    hasImage: true,
-    links: {
-      github: 'NEUDitao',
-      website: 'https://eddyli.dev/',
-      email: 'li.edwa@northeastern.edu',
-    },
-    interests: [
-      'anything, literally anything.',
-      'I love musicals',
-      'basketball'
-    ]
-  },
-  {
     name: 'Brandon Liang',
     school: 'KCCS',
     year: '2023',
-    hasImage: true,
+    imgName: 'brandonliang',
     links: {
       github: '54skyxenon',
       website: 'https://brandonliang.com/',
@@ -54,7 +38,7 @@ const MEMBERS = [
     name: 'Daniel Melcer',
     school: 'KCCS',
     year: '2021',
-    hasImage: true,
+    imgName: 'danielmelcer',
     links: {
       github: 'dmelcer9',
       website: 'https://brandonliang.com/',
@@ -71,7 +55,7 @@ const MEMBERS = [
     name: 'Natalie Hsu',
     school: 'KCCS + CAMD',
     year: '2022 + 1',
-    hasImage: true,
+    imgName: 'natdhsu',
     links: {
       github: 'indefinities',
       website: 'https://indefinities.github.io/',

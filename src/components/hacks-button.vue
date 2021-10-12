@@ -31,7 +31,6 @@ export default {
   height: fit-content;
   padding: 15px;
   transition: background-color 1s;
-
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;

@@ -36,6 +36,9 @@ export default {
     HacksModal,
   },
   props: {
+    /**
+     * Determines if the website is being displayed on a mobile device.
+     */
     isMobile: {
       type: Boolean,
       required: true,
@@ -49,6 +52,9 @@ export default {
     };
   },
   methods: {
+    /**
+     * Closes the mobile navigation modal on close button.
+     */
     closeModal() {
       this.menuOpen = !this.menuOpen;
     },
@@ -100,12 +106,12 @@ export default {
     position: relative;
     text-decoration: none;
     font-weight: 900;
-    color: $hacks-nav-inactive-color !important;
+    color: $hacks-nav-inactive-color;
     font-size: $hacks-h2;
     padding: 0.5em;
 
     &.router-link-exact-active {
-      color: $hacks-nav-active-color !important;
+      color: $hacks-nav-active-color;
     }
 
     &:hover,

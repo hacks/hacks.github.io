@@ -1,19 +1,29 @@
 <template>
   <div class="hacks-announce">
-    <div class="hacks-announce__bubble">
-      <h3>announcements</h3>
-      <p>
-        Lightning talks happening soon!
-        <br />Come to our meetings to find out more.
-      </p>
-    </div>
+    <iframe
+      src="https://discord.com/widget?id=809618860726157332&theme=dark"
+      width="293"
+      height="350"
+      allowtransparency="true"
+      frameborder="0"
+      sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+    ></iframe>
+
+    <iframe
+      class="hacks-announce__discord-widget"
+      src="https://e.widgetbot.io/channels/809618860726157332/813553879764828161"
+      width="293"
+      height="350"
+      frameborder="0"
+    ></iframe>
+
     <div class="hacks-announce__logo" />
   </div>
 </template>
 
 <script>
 export default {
-  name: "hacks-announce"
+  name: "hacks-announce",
 };
 </script>
 
@@ -21,15 +31,18 @@ export default {
 @import "../styles/_base";
 
 .hacks-announce {
+  margin: 10px 0;
+  min-width: $hacks-page-width;
   display: flex;
   flex-flow: row-reverse wrap;
+  justify-content: space-around;
 
-  @media (min-width: $hacks-page-width) {
-    margin-left: 30px;
+  &__discord-widget {
+    border-radius: 10px;
   }
 
   @media (max-width: 585px) {
-    width: 235px !important;
+    width: 293px;
     margin: 0 auto;
   }
 
@@ -44,38 +57,13 @@ export default {
   &__logo {
     margin-top: 5em;
     background: url("../assets/logo.svg") no-repeat;
-    background-size: 190px auto;
-    width: 190px;
-    height: 190px;
+    background-size: 293px auto;
+    width: 293px;
+    height: 293px;
 
     @media (max-width: 585px) {
       margin-top: unset;
       padding-right: 30px;
-    }
-  }
-  &__bubble {
-    float: right;
-    position: relative;
-    margin-bottom: 2em;
-
-    @media (min-width: 585px) {
-      margin-left: 15px;
-    }
-
-    @media (max-width: 585px) {
-      margin-bottom: unset;
-    }
-
-    p {
-      font-size: 18px;
-      line-height: unset;
-      margin: unset;
-      color: black;
-      background: url("../assets/speech-bubble.svg") no-repeat;
-      background-size: contain;
-      width: 220px;
-      height: 180px;
-      padding: 15px;
     }
   }
 }

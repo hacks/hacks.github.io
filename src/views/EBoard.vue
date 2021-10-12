@@ -5,12 +5,11 @@
       <hacks-profile-card
         class="hacks-eboard__card"
         @click.native="triggerModal(person)"
-        v-for="(person, index) in eboard"
+        v-for="(person, index) in board"
         :key="index"
         :person="person"
-        page="eboard"
       >
-        <p class="hacks-small-caps hacks-eboard__position">
+        <p class="hacks-small-caps">
           {{ person.position }}
         </p>
       </hacks-profile-card>
@@ -23,8 +22,8 @@
         <img
           class="hacks-eboard__image"
           :src="
-            member.hasImage
-              ? require('../assets/members/' + member.name + '.jpg')
+            member.imgName
+              ? require('../assets/members/' + member.imgName + '.png')
               : require('../assets/logo.svg')
           "
         />
@@ -60,7 +59,7 @@
 </template>
 
 <script>
-import EBOARD from "../data/eboard";
+import board from "../data/board";
 import HacksModal from "../components/hacks-modal";
 import HacksPopup from "../components/hacks-popup";
 import HacksProfileCard from "../sections/hacks-profile-card";
@@ -74,21 +73,35 @@ export default {
   },
   data() {
     return {
-      eboard: EBOARD,
+      board,
       showModal: false,
       member: {},
       links: {},
     };
   },
   methods: {
+    /**
+    Triggers the modal to pop up when a profile card is clicked.
+    (Assigns the selected person to display in the modal.)
+     */
     triggerModal(currPers) {
+      console.log(currPers)
       this.showModal = !this.showModal;
       this.member = currPers;
       this.links = currPers.links;
     },
+
+    /**
+    The modal is closed when the user presses the "x" button on the modal.
+     */
     closeModal() {
       this.showModal = !this.showModal;
     },
+
+    /**
+     * Returns the link to be displayed at the bottom of modal as a URL.
+     * (based from username of person)
+     */
     getUrl(key, user) {
       let url;
       switch (key) {
@@ -143,11 +156,6 @@ export default {
     cursor: pointer;
   }
 
-  &__position {
-    opacity: 0.7;
-    word-wrap: break-word;
-  }
-
   &__row {
     display: flex;
     flex-flow: row wrap;
@@ -162,7 +170,7 @@ export default {
   &__image {
     @extend %fade-in-fast;
     width: 20em;
-    border-radius: 20px;
+    border-radius: 10px;
     display: block;
     margin: auto;
     margin-top: 3em;
