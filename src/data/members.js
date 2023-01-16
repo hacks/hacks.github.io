@@ -35,6 +35,24 @@ const MEMBERS = [
     ]
   },
   {
+    name: 'Junwoo Lee',
+    school: 'Khoury',
+    year: '2023',
+    imgName: '',
+    links: {
+      github: 'danwo0',
+      website: '',
+      email: 'lee.junw@northeastern.edu',
+    },
+    interests: [
+      'Cooking',
+      'Camping',
+      'Games',
+      'definitely not a League player',
+      'making cocktails'
+    ]
+  },
+  {
     name: 'Daniel Melcer',
     school: 'KCCS',
     year: '2021',

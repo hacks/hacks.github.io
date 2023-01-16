@@ -61,17 +61,17 @@ const board = [
     }
   },
   {
-    name: 'Danish Farooq',
-    position: 'Commander of Communication',
-    school: 'KCCS',
+    name: 'Junwoo Lee',
+    position: 'Webmaster',
+    school: 'Khoury',
     major: 'Computer Science',
-    year: '2022',
-    imgName: 'danishfarooq',
-    bio: '',
+    year: '2023',
+    imgName: '',
+    bio: 'If you see me outside, chances are you\'re in Snell',
     links: {
-      website: 'https://jennydaman.gitlab.io/',
-      gitHub: 'jennydaman',
-      email: 'jz@nuhacks.io'
+      website: '',
+      gitHub: 'danwo0',
+      email: 'lee.junw@northeastern.edu'
     }
   },
   {
