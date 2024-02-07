@@ -1,91 +1,94 @@
 const board = [
   {
-    name: 'Nat Hsu',
+    name: 'Hannah Eichinger',
     position: 'President',
-    school: 'KCCS + CAMD',
-    major: 'Computer Science & Interaction Design',
-    year: '2021',
-    imgName: 'natdhsu',
-    bio: 'yeah still thinking about what to say here 😬',
-    links: {
-      website: 'https://indefinities.gitHub.io',
-      gitHub: "indefinities",
-      email: 'hsu.na@northeastern.edu',
-      linkedIn: 'natdhsu'
-    }
-  },
-  {
-    name: 'Kyle Posluns',
-    position: 'Vice President',
-    school: 'KCCS',
+    school: 'Khoury',
     major: 'Computer Science',
-    year: '2022',
-    imgName: 'kyleposluns',
+    year: '2024',
+    imgName: 'hannaheichinger',
     bio: '',
     links: {
-      website: 'https://kyleposluns.com',
-      gitHub: 'kyleposluns',
-      email: 'posluns.k@northeastern.edu',
-      linkedIn: 'kyleposluns'
+      website: '',
+      gitHub: '',
+      email: 'eichinger.h@northeastern.edu',
+      linkedIn: 'hannah-eichinger-282168223'
     }
-
   },
   {
-    name: 'Alex Reed',
-    position: 'Treasurer',
-    school: 'KCCS',
+    name: 'Ari',
+    position: 'Vice President',
+    school: 'Khoury',
     major: 'Computer Science',
     year: '2023',
-    imgName: 'alexreed',
-    bio: 'TODO',
+    imgName: 'ari',
+    bio: 'I am Ari',
     links: {
-      gitHub: 'reeda19',
-      email: "reed.al@northeastern.edu",
-      linkedIn: 'alex-reed-a84b9b183'
-    }
-
-  },
-  {
-    name: 'this could be you!',
-    position: 'Webmaster',
-    school: '',
-    major: '',
-    year: '',
-    imgName: '',
-    bio: 'Apply using the link below!',
-    links: {
-      website: 'https://forms.gle/te7CMixoXdwv5GCv8',
+      website: '',
       gitHub: '',
       email: '',
       linkedIn: ''
     }
+
   },
   {
-    name: 'Junwoo Lee',
-    position: 'Webmaster',
+    name: 'Shashwat Patel',
+    position: 'Treasurer',
     school: 'Khoury',
     major: 'Computer Science',
-    year: '2023',
-    imgName: '',
-    bio: 'If you see me outside, chances are you\'re in Snell',
+    year: '2024',
+    imgName: 'shashwatpatel',
+    bio: '',
     links: {
       website: '',
-      gitHub: 'danwo0',
-      email: 'lee.junw@northeastern.edu'
+      gitHub: '',
+      email: '',
+      linkedIn: 'patelshas'
+    }
+
+  },
+  {
+    name: 'Shoaib Rakhangi',
+    position: 'Secretary',
+    school: 'Khoury',
+    major: 'Computer Science',
+    year: '2024',
+    imgName: 'shoaibrakhangi',
+    bio: '',
+    links: {
+      website: 'https://srakhangi.netlify.app',
+      gitHub: 'sho-r1024',
+      email: 'rakhangi.s@northeastern.edu',
+      linkedIn: 'shoaib-rakhangi-5b3352204'
     }
   },
   {
-    name: 'Jennings Zhang',
-    position: 'Chief of Aquatics',
-    school: 'KCCS + COS',
-    major: 'Computer Science & Biology',
-    year: '2022',
-    imgName: 'jenningszhang',
-    bio: 'Opinionated and awkward person ;-;',
+    name: 'Deanna Turner',
+    position: 'Webmaster',
+    school: 'Khoury + CAMD',
+    major: 'Computer Science + Music Technology',
+    year: '2025',
+    imgName: 'deannaturner',
+    bio: 'Nerd, musician and occasional gamer.',
     links: {
-      website: 'https://jennydaman.gitlab.io/',
-      gitHub: 'jennydaman',
-      email: 'jz@nuhacks.io'
+      website: '',
+      gitHub: 'rawsodium',
+      email: 'turner.de@northeastern.edu',      
+      linkedIn: 'deanna-turner04'
+    }
+  },
+  {
+    name: 'Marin Childers',
+    position: 'Events Coordinator',
+    school: 'Khoury',
+    major: 'Computer Science',
+    year: '2024',
+    imgName: '',
+    bio: '',
+    links: {
+      website: '',
+      gitHub: '',
+      email: '',
+      linkedIn: 'marinchilders'
     }
   }
 ];

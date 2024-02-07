@@ -1,18 +1,10 @@
 <template>
   <div class="hacks-announce">
-    <iframe
-      src="https://discord.com/widget?id=809618860726157332&theme=dark"
-      width="293"
-      height="350"
-      allowtransparency="true"
-      frameborder="0"
-      sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
-    ></iframe>
 
     <iframe
       class="hacks-announce__discord-widget"
       src="https://e.widgetbot.io/channels/809618860726157332/813553879764828161"
-      width="293"
+      width="500"
       height="350"
       frameborder="0"
     ></iframe>

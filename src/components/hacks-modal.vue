@@ -25,7 +25,7 @@ export default {
     document.body.style.overflow = "hidden";
     document.body.style.width = "100vw";
   },
-  destroyed() {
+  unmounted() {
     const scrollY = document.body.style.top;
     document.body.style.position = "";
     document.body.style.overflow = "auto";
