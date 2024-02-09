@@ -82,8 +82,8 @@ const board = [
     school: 'Khoury',
     major: 'Computer Science',
     year: '2024',
-    imgName: '',
-    bio: '',
+    imgName: 'marinchilders',
+    bio: 'Film bro',
     links: {
       website: '',
       gitHub: '',
