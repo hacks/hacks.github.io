@@ -1,12 +1,9 @@
-import Vue from 'vue';
-import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
 import About from '../views/About.vue';
 import EBoard from '../views/EBoard.vue';
 import Members from '../views/Members.vue';
 import Conduct from '../views/Conduct.vue';
-
-Vue.use(VueRouter);
+import { createRouter, createWebHistory } from 'vue-router';
 
 const routes = [
   {
@@ -36,10 +33,11 @@ const routes = [
   }
 ];
 
-const router = new VueRouter({
-  routes
+const router = createRouter({
+  history: createWebHistory(),
+  routes: routes,
 });
 
-export default router;
 Object.freeze(routes);
+export default router;
 export { routes };
